@@ -45,7 +45,11 @@ SOURCES += main.cpp\
     getfeatures.cpp \
     msdhmm_dprob.cpp \
     msdhmm_hmm.cpp \
-    gesturerecognitiondhmm.cpp
+    gesturerecognitiondhmm.cpp \
+    acquisitionmyo.cpp \
+    testmyo.cpp \
+    guitestmyo.cpp \
+    myocollector.cpp
 
 HEADERS  += mainwindow.h \
     frameset.h \
@@ -81,19 +85,24 @@ HEADERS  += mainwindow.h \
     getfeatures.h \
     msdhmm_dprob.h \
     msdhmm_hmm.h \
-    gesturerecognitiondhmm.h
+    gesturerecognitiondhmm.h \
+    acquisitionmyo.h \
+    testmyo.h \
+    guitestmyo.h \
+    myocollector.h
 
 FORMS    += mainwindow.ui \
     GUIgesturerecognitionhmm.ui \
     GUIgesturerecognitiondtw.ui \
     GUIgesturerecognitiontest.ui \
-    GUIgesturerecognitionsave.ui
+    GUIgesturerecognitionsave.ui \
+    GUImyo.ui
 
 win32 {
-    INCLUDEPATH += "C:\opencv\opencv\build\include" \
+    INCLUDEPATH += "C:\Libs\opencv\build\include" \
 
     CONFIG(debug,debug|release) {
-        LIBS += -L"C:\opencv\opencv\build\x86\vc12\lib" \
+        LIBS += -L"C:\Libs\opencv\build\x86\vc12\lib" \
             -lopencv_core2411d \
             -lopencv_highgui2411d \
             -lopencv_imgproc2411d \
@@ -109,7 +118,7 @@ win32 {
 
     CONFIG(release,debug|release) {
         DEFINES += QT_NO_WARNING_OUTPUT QT_NO_DEBUG_OUTPUT
-        LIBS += -L"C:\opencv\opencv\build\x86\vc12\lib" \
+        LIBS += -L"C:\Libs\opencv\build\x86\vc12\lib" \
             -lopencv_core2411 \
             -lopencv_highgui2411 \
             -lopencv_imgproc2411 \
@@ -125,27 +134,27 @@ win32 {
 }
 
 win32 {
-    INCLUDEPATH += "C:\Program Files\Microsoft SDKs\Kinect\v1.8\inc" \
+    INCLUDEPATH += "C:\\Program Files\\Microsoft SDKs\\Kinect\\v1.8\\inc" \
 
     CONFIG(debug,debug|release) {
-        LIBS += -L"C:\Program Files\Microsoft SDKs\Kinect\v1.8\lib\x86" \
+        LIBS += -L"C:\\Program Files\\Microsoft SDKs\\Kinect\\v1.8\\lib\\x86" \
             -lKinect10 \
 
     }
 
     CONFIG(release,debug|release) {
         DEFINES += QT_NO_WARNING_OUTPUT QT_NO_DEBUG_OUTPUT
-        LIBS += -L"C:\Program Files\Microsoft SDKs\Kinect\v1.8\lib\x86" \
+        LIBS += -L"C:\\Program Files\\Microsoft SDKs\\Kinect\\v1.8\\lib\\x86" \
             -lKinect10 \
     }
 }
 
 
 win32 {
-    INCLUDEPATH += "C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\inc" \
+    INCLUDEPATH += "C:\\Program Files\\Microsoft SDKs\\Kinect\\v2.0_1409\\inc\\" \
 
     CONFIG(debug,debug|release) {
-        LIBS += -L"C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\Lib\x86" \
+        LIBS += -L"C:\\Program Files\\Microsoft SDKs\\Kinect\\v2.0_1409\\lib\\x86" \
             -lKinect20 \
             -lKinect20.Face \
 
@@ -153,9 +162,25 @@ win32 {
 
     CONFIG(release,debug|release) {
         DEFINES += QT_NO_WARNING_OUTPUT QT_NO_DEBUG_OUTPUT
-        LIBS += -L"C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\Lib\x86" \
+        LIBS += -L"C:\\Program Files\\Microsoft SDKs\\Kinect\\v2.0_1409\\lib\\x86" \
             -lKinect20 \
             -lKinect20.Face \
+    }
+}
+
+win32 {
+    INCLUDEPATH += "E:\\Google Drive\\Progetti\\GRFramework DEMO\\GRFramework\\myo\\include\\" \
+
+    CONFIG(debug,debug|release) {
+        LIBS += -L"E:\\Google Drive\\Progetti\\GRFramework DEMO\\GRFramework\\myo\\lib" \
+            -lmyo32 \
+
+    }
+
+    CONFIG(release,debug|release) {
+        DEFINES += QT_NO_WARNING_OUTPUT QT_NO_DEBUG_OUTPUT
+        LIBS += -L"E:\\Google Drive\\Progetti\\GRFramework DEMO\\GRFramework\\myo\\lib" \
+            -lmyo32 \
     }
 }
 

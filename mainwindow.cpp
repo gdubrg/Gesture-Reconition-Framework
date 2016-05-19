@@ -10,6 +10,8 @@
 #include "guigesturerecognitiondtw.h"
 #include "guigesturerecognitiontest.h"
 #include "guigesturerecognitionsave.h"
+#include "guitestmyo.h"
+
 
 using namespace std;
 using namespace std::chrono;
@@ -47,6 +49,7 @@ MainWindow::MainWindow(QStringList arguments, QWidget *parent) :
     _pkinect = nullptr;
 
 
+
 }
 
 void::MainWindow::doAll(){
@@ -56,24 +59,41 @@ void::MainWindow::doAll(){
         delete _pkinect;
     _pkinect = nullptr;
 
+    //----------------------------DEVICES-----------------------------------
 
-    //Kinect 1
+
+    // Kinect 1
     if(ui->radioKinect1->isChecked()){
         _pkinect = new AcquisitionKinect1();
     }
 
-    //Kinect 2
+    // Kinect 2
     if(ui->radioKinect2->isChecked()){
         _pkinect = new AcquisitionKinect2();
         _pkinect->setSkeleton(MODE_CLOSEST);
         _pkinect->setResolution(RESOLUTION_VGA);
     }
 
-    //File
+    // Myo
+//    hub("com.example.hello-myo");
+//    cout << "Attempting to find a Myo..." << endl;
+//    myo::Myo* myo = hub.waitForMyo(10000);
+//    if(!myo)
+//        cout << "Unable to find a Myo..." << endl;
+//    cout << "Connected to a Myo armband!" << endl;
+//    //DataCollector collector;
+//    //hub.addListener(&collector);
+    if(ui->radioMyo->isChecked()){
+        _pmyo = new AcquisitionMyo();
+    }
+
+    // File
     if(ui->radioFile->isChecked())
         _pkinect =  new AcquisitionFile();
 
-    //HMM
+    //-----------------------------------METHODS--------------------------------------
+
+    // HMM
     if(ui->radioHMM->isChecked()){
         _precognizer =  new GestureRecognitionHMM();
         GUIgesturerecognitionhmm *pGUI = new GUIgesturerecognitionhmm (dynamic_cast<GestureRecognitionHMM*>(_precognizer));
@@ -81,7 +101,7 @@ void::MainWindow::doAll(){
         pGUI->show();
     }
 
-    //DTW
+    // DTW
     if(ui->radioDTW->isChecked()){
         _precognizer = new GestureRecognitionDTW();
         GUIgesturerecognitiondtw *pGUI = new GUIgesturerecognitiondtw (dynamic_cast<GestureRecognitionDTW*>(_precognizer));
@@ -89,7 +109,10 @@ void::MainWindow::doAll(){
         pGUI->show();
     }
 
-    //Test
+
+    //---------------------------------UTILITY-------------------------------------
+
+    // Test
     if(ui->radioTest->isChecked()){
         _precognizer = new GestureRecognitionTEST();
         GUIgesturerecognitiontest *pGUI = new GUIgesturerecognitiontest (dynamic_cast<GestureRecognitionTEST*>(_precognizer));
@@ -97,7 +120,7 @@ void::MainWindow::doAll(){
         pGUI->show();
     }
 
-    //Save Annotation
+    // Save Annotation
     if(ui->radioSave->isChecked()){
         _precognizer = new GestureRecognitionSave();
         GUIgesturerecognitionsave *pGUI = new GUIgesturerecognitionsave (dynamic_cast<GestureRecognitionSave*>(_precognizer));
@@ -105,9 +128,17 @@ void::MainWindow::doAll(){
         pGUI->show();
     }
 
+    // Test MYO
+    if(ui->radioTestMyo->isChecked()){
+        _precognizer = new TestMyo();
+        GUItestMyo *pGUI = new GUItestMyo (dynamic_cast<TestMyo*>(_precognizer));
+        pGUI->setParent(ui->widgetL);
+        pGUI->show();
+    }
+
     ui->widgetL->setVisible(true);
 
-    //Timer
+    // Timer
     timer->start(30);
 
 }
@@ -189,11 +220,16 @@ void MainWindow::processStep(){
     using ms = duration<float, std::milli>;
 
 
-    //Get next frame
+    //Get next frame KINECT
     auto start = timer.now();
     if(_pkinect != nullptr)
         _pkinect->getFrame(frame);
     auto stop = timer.now();
+
+    //GEt next frame MYO
+    if(_pmyo != nullptr){
+        _pmyo->getFrame(frame);
+    }
 
     //if(frame.RGB.cols > 0)
         totFrame++;

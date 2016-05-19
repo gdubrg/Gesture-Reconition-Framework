@@ -9,8 +9,14 @@
 #include "acquisitionkinect1.h"
 #include "acquisitionkinect2.h"
 #include "acquisitionfile.h"
+#include "acquisitionmyo.h"
 #include "gesturerecognitionhmm.h"
 #include "gesturerecognitiondtw.h"
+
+#include <myo/myo.hpp>
+#include <stdexcept>
+#include <algorithm>
+#include <iomanip>
 
 namespace Ui {
 class MainWindow;
@@ -40,6 +46,8 @@ private:
     //acquisition
     Acquisition *_pkinect = nullptr;
 
+    Acquisition *_pmyo = nullptr;
+
     // gesture recognition
     GestureRecognition * _precognizer = nullptr;
 
@@ -48,6 +56,10 @@ private:
 
     //Frame set
     FrameSet frame;
+
+    // MYO
+    //myo::Hub hub;
+
 
 };
 

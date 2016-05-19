@@ -15,8 +15,6 @@ using namespace cv;
 static const int maxWindowSize = 2000;
 
 GestureRecognitionSave::GestureRecognitionSave(){
-
-
 }
 
 void GestureRecognitionSave::recognize(FrameSet &frame){

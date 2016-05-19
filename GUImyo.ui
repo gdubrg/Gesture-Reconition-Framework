@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GUImyo</class>
+ <widget class="QWidget" name="GUImyo">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1080</height>
+   </rect>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Gesture Recognition with HMM</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralWidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>3290</width>
+     <height>961</height>
+    </rect>
+   </property>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>321</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Myo Armbrand</string>
+    </property>
+   </widget>
+   <widget class="QCustomPlot" name="chart1" native="true">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>30</y>
+      <width>1221</width>
+      <height>81</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>1180</x>
+      <y>630</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QCustomPlot" name="chart2" native="true">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>120</y>
+      <width>1221</width>
+      <height>81</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QCustomPlot" name="chart3" native="true">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>210</y>
+      <width>1221</width>
+      <height>81</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QCustomPlot" name="chart4" native="true">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>300</y>
+      <width>1221</width>
+      <height>81</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QCustomPlot" name="chart5" native="true">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>390</y>
+      <width>1221</width>
+      <height>81</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QCustomPlot" name="chart6" native="true">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>480</y>
+      <width>1221</width>
+      <height>81</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QCustomPlot" name="chart2_6" native="true">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>570</y>
+      <width>1221</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <widget class="QCustomPlot" name="chart7" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1221</width>
+       <height>81</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QCustomPlot" name="chart8" native="true">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>650</y>
+      <width>1221</width>
+      <height>81</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QCustomPlot" name="chartOr" native="true">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>750</y>
+      <width>1221</width>
+      <height>191</height>
+     </rect>
+    </property>
+   </widget>
+   <zorder>label_4</zorder>
+   <zorder>chart1</zorder>
+   <zorder>label</zorder>
+   <zorder>chart2</zorder>
+   <zorder>chart3</zorder>
+   <zorder>chart4</zorder>
+   <zorder>chart5</zorder>
+   <zorder>chart6</zorder>
+   <zorder>chart2_6</zorder>
+   <zorder>chart8</zorder>
+   <zorder>chart7</zorder>
+   <zorder>chartOr</zorder>
+  </widget>
+  <action name="actionProject">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Project</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionKk">
+   <property name="text">
+    <string>kk</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionExit_2">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

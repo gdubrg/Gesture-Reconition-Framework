@@ -94,7 +94,22 @@ public:
        bodyJoint.resize(28, tripletPoint());
        bodyJointDepth.resize(28, tripletPoint());
        bodyJointRGB.resize(28, tripletPoint());
+
+       muscles.resize(8, 0);
    }
+
+
+
+
+   // MYO
+
+   std::vector<int> muscles;
+
+   int myoPitch;
+   int myoRoll;
+   int myoYaw;
+
+
 
 
 private:
