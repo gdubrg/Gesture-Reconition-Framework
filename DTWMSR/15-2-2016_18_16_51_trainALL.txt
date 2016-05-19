@@ -1,0 +1,13 @@
+15-2-2016_18_16_51
+DTWMSR/trainALL.txt
+DTWMSR/trainALL.txt
+DISCRETE HMM
+l: 0.5
+k: 10
+
+Total label for train: 20
+Theorical total action 278
+Total action tested: 278
+Right Classified: 264
+Wrong Classified: 14
+Classification: 0.94964%

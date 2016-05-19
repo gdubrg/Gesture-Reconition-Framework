@@ -1,0 +1,10 @@
+{
+    "Annotation Path": "./gestures/data/",
+    "Coordinates Path": "./gestures/data/default_name.txt",
+    "Depth Path": "./gestures/data/default_name_depth",
+    "Kinect Version": 2,
+    "Name file": "default_name",
+    "Player Path": "./gestures/data/default_name_player",
+    "RGB Path": "./gestures/data/default_name_RGB",
+    "Video length": 82
+}

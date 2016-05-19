@@ -1,0 +1,29 @@
+{
+	"types":
+	[
+		{
+		"id": 1,
+		"type": "Slide Right"
+		},
+		{
+		"id": 2,
+		"type": "Slide Left"
+		},
+		{
+		"id": 3,
+		"type": "Zoom In"
+		},
+		{
+		"id": 4,
+		"type": "Zoom Out"
+		},
+		{
+		"id": 5,
+		"type": "Point"
+		},
+		{
+		"id": 6,
+		"type": "Rotate"
+		}
+	]
+}

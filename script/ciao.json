@@ -1,0 +1,20 @@
+{
+    "Annotations": [
+        {
+            "Begin": 2,
+            "End": 10,
+            "Type Action": "Slide Right"
+        },
+		{
+            "Begin": 15,
+            "End": 18,
+            "Type Action": "Slide Left"
+        },
+        {
+            "Begin": 25,
+            "End": 34,
+            "Type Action": "Slide Right"
+        }
+    ],
+    "Length": 35
+}

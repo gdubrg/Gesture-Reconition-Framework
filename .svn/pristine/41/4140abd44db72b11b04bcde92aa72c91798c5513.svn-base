@@ -1,0 +1,1429 @@
+LIST NAMES: Loaded 120 files for training...
+LIST NAMES: Loaded 106 files for testing...
+New HMM created, label: 2
+HMM initialized.
+Training...
+Saving...
+
+New HMM created, label: 3
+HMM initialized.
+Training...
+Saving...
+
+New HMM created, label: 5
+HMM initialized.
+Training...
+Saving...
+
+New HMM created, label: 6
+HMM initialized.
+Training...
+Saving...
+
+New HMM created, label: 10
+HMM initialized.
+Training...
+Saving...
+
+Features NULL, action discarded
+Features NULL, action discarded
+Features NULL, action discarded
+New HMM created, label: 13
+HMM initialized.
+Training...
+Saving...
+
+New HMM created, label: 18
+HMM initialized.
+Training...
+Saving...
+
+Features NULL, action discarded
+Features NULL, action discarded
+New HMM created, label: 20
+HMM initialized.
+Training...
+Saving...
+
+HMMs loaded: 8
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a02_s02_e01_skeleton3D.txt
+GT: 2	OUR: 2	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a02_s02_e02_skeleton3D.txt
+GT: 2	OUR: 2	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a02_s02_e03_skeleton3D.txt
+GT: 2	OUR: 2	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a02_s06_e01_skeleton3D.txt
+GT: 2	OUR: 2	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a02_s06_e02_skeleton3D.txt
+GT: 2	OUR: 2	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a02_s06_e03_skeleton3D.txt
+GT: 2	OUR: 2	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a02_s08_e01_skeleton3D.txt
+GT: 2	OUR: 2	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a02_s08_e02_skeleton3D.txt
+GT: 2	OUR: 13	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a02_s08_e03_skeleton3D.txt
+GT: 2	OUR: 2	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a02_s10_e01_skeleton3D.txt
+GT: 2	OUR: 2	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a02_s10_e02_skeleton3D.txt
+GT: 2	OUR: 2	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a02_s10_e03_skeleton3D.txt
+GT: 2	OUR: 2	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a03_s02_e01_skeleton3D.txt
+GT: 3	OUR: 3	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a03_s02_e02_skeleton3D.txt
+GT: 3	OUR: 3	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a03_s02_e03_skeleton3D.txt
+GT: 3	OUR: 3	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a03_s06_e01_skeleton3D.txt
+GT: 3	OUR: 3	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a03_s06_e02_skeleton3D.txt
+GT: 3	OUR: 6	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a03_s06_e03_skeleton3D.txt
+GT: 3	OUR: 3	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a03_s08_e01_skeleton3D.txt
+GT: 3	OUR: 3	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a03_s08_e02_skeleton3D.txt
+GT: 3	OUR: 3	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a03_s08_e03_skeleton3D.txt
+GT: 3	OUR: 3	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a03_s10_e01_skeleton3D.txt
+GT: 3	OUR: 2	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a03_s10_e02_skeleton3D.txt
+GT: 3	OUR: 2	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a03_s10_e03_skeleton3D.txt
+GT: 3	OUR: 2	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a05_s02_e01_skeleton3D.txt
+GT: 5	OUR: 5	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a05_s02_e02_skeleton3D.txt
+GT: 5	OUR: 5	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a05_s02_e03_skeleton3D.txt
+GT: 5	OUR: 18	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a05_s06_e01_skeleton3D.txt
+GT: 5	OUR: 5	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a05_s06_e02_skeleton3D.txt
+GT: 5	OUR: 5	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a05_s08_e01_skeleton3D.txt
+GT: 5	OUR: 5	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a05_s08_e02_skeleton3D.txt
+GT: 5	OUR: 5	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a05_s08_e03_skeleton3D.txt
+GT: 5	OUR: 5	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a05_s10_e01_skeleton3D.txt
+GT: 5	OUR: 5	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a05_s10_e02_skeleton3D.txt
+GT: 5	OUR: 5	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a05_s10_e03_skeleton3D.txt
+GT: 5	OUR: 5	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a06_s02_e01_skeleton3D.txt
+GT: 6	OUR: 18	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a06_s02_e02_skeleton3D.txt
+GT: 6	OUR: 18	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a06_s02_e03_skeleton3D.txt
+GT: 6	OUR: 18	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a06_s06_e01_skeleton3D.txt
+GT: 6	OUR: 6	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a06_s06_e02_skeleton3D.txt
+GT: 6	OUR: 6	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a06_s08_e01_skeleton3D.txt
+GT: 6	OUR: 6	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a06_s08_e02_skeleton3D.txt
+GT: 6	OUR: 6	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a06_s08_e03_skeleton3D.txt
+GT: 6	OUR: 5	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a06_s10_e01_skeleton3D.txt
+GT: 6	OUR: 6	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a06_s10_e02_skeleton3D.txt
+GT: 6	OUR: 6	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a06_s10_e03_skeleton3D.txt
+GT: 6	OUR: 6	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a10_s02_e01_skeleton3D.txt
+GT: 10	OUR: 10	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a10_s02_e02_skeleton3D.txt
+GT: 10	OUR: 10	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a10_s02_e03_skeleton3D.txt
+GT: 10	OUR: 10	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a10_s04_e01_skeleton3D.txt
+GT: 10	OUR: 10	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a10_s04_e02_skeleton3D.txt
+GT: 10	OUR: 10	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a10_s04_e03_skeleton3D.txt
+GT: 10	OUR: 10	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a10_s06_e01_skeleton3D.txt
+GT: 10	OUR: 10	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a10_s06_e02_skeleton3D.txt
+GT: 10	OUR: 10	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a10_s06_e03_skeleton3D.txt
+GT: 10	OUR: 10	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a10_s08_e01_skeleton3D.txt
+GT: 10	OUR: 10	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a10_s08_e02_skeleton3D.txt
+GT: 10	OUR: 10	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a10_s08_e03_skeleton3D.txt
+GT: 10	OUR: 10	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a10_s10_e01_skeleton3D.txt
+GT: 10	OUR: 10	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a10_s10_e02_skeleton3D.txt
+GT: 10	OUR: 10	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a10_s10_e03_skeleton3D.txt
+GT: 10	OUR: 10	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a13_s02_e01_skeleton3D.txt
+GT: 13	OUR: 13	TRUE
+Null action, not tested!
+Null action, not tested!
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a13_s04_e01_skeleton3D.txt
+GT: 13	OUR: 13	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a13_s04_e02_skeleton3D.txt
+GT: 13	OUR: 13	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a13_s04_e03_skeleton3D.txt
+GT: 13	OUR: 13	TRUE
+Null action, not tested!
+Null action, not tested!
+Null action, not tested!
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a13_s08_e01_skeleton3D.txt
+GT: 13	OUR: 13	TRUE
+Null action, not tested!
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a13_s08_e03_skeleton3D.txt
+GT: 13	OUR: 13	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a13_s10_e01_skeleton3D.txt
+GT: 13	OUR: 13	TRUE
+Null action, not tested!
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a13_s10_e03_skeleton3D.txt
+GT: 13	OUR: 13	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s02_e01_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s02_e02_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s02_e03_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s04_e01_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s04_e02_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s04_e03_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s06_e01_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s06_e02_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s06_e03_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s08_e01_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s08_e02_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s08_e03_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s10_e01_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s10_e02_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s10_e03_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Null action, not tested!
+Null action, not tested!
+Null action, not tested!
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a20_s04_e01_skeleton3D.txt
+GT: 20	OUR: 13	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a20_s04_e02_skeleton3D.txt
+GT: 20	OUR: 20	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a20_s04_e03_skeleton3D.txt
+GT: 20	OUR: 20	TRUE
+Null action, not tested!
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a20_s06_e02_skeleton3D.txt
+GT: 20	OUR: 13	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a20_s06_e03_skeleton3D.txt
+GT: 20	OUR: 20	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a20_s08_e01_skeleton3D.txt
+GT: 20	OUR: 20	TRUE
+Null action, not tested!
+Null action, not tested!
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a20_s10_e01_skeleton3D.txt
+GT: 20	OUR: 18	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a20_s10_e02_skeleton3D.txt
+GT: 20	OUR: 20	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a20_s10_e03_skeleton3D.txt
+GT: 20	OUR: 13	FALSE
+Classification: 0.849462%
+LIST NAMES: Loaded 118 files for training...
+LIST NAMES: Loaded 113 files for testing...
+New HMM created, label: 1
+HMM initialized.
+Training...
+Saving...
+
+New HMM created, label: 4
+HMM initialized.
+Training...
+Saving...
+
+New HMM created, label: 7
+HMM initialized.
+Training...
+Saving...
+
+New HMM created, label: 8
+HMM initialized.
+Training...
+Saving...
+
+New HMM created, label: 9
+HMM initialized.
+Training...
+Saving...
+
+New HMM created, label: 11
+HMM initialized.
+Training...
+Saving...
+
+New HMM created, label: 12
+HMM initialized.
+Training...
+Saving...
+
+Features NULL, action discarded
+New HMM created, label: 14
+HMM initialized.
+Training...
+Saving...
+
+HMMs loaded: 8
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a01_s02_e01_skeleton3D.txt
+GT: 1	OUR: 1	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a01_s02_e02_skeleton3D.txt
+GT: 1	OUR: 12	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a01_s02_e03_skeleton3D.txt
+GT: 1	OUR: 11	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a01_s06_e01_skeleton3D.txt
+GT: 1	OUR: 1	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a01_s06_e02_skeleton3D.txt
+GT: 1	OUR: 8	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a01_s06_e03_skeleton3D.txt
+GT: 1	OUR: 1	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a01_s08_e01_skeleton3D.txt
+GT: 1	OUR: 1	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a01_s08_e02_skeleton3D.txt
+GT: 1	OUR: 1	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a01_s08_e03_skeleton3D.txt
+GT: 1	OUR: 1	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a01_s10_e01_skeleton3D.txt
+GT: 1	OUR: 1	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a01_s10_e02_skeleton3D.txt
+GT: 1	OUR: 1	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a01_s10_e03_skeleton3D.txt
+GT: 1	OUR: 1	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a04_s02_e01_skeleton3D.txt
+GT: 4	OUR: 4	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a04_s02_e02_skeleton3D.txt
+GT: 4	OUR: 4	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a04_s02_e03_skeleton3D.txt
+GT: 4	OUR: 4	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a04_s06_e01_skeleton3D.txt
+GT: 4	OUR: 7	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a04_s06_e02_skeleton3D.txt
+GT: 4	OUR: 8	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a04_s06_e03_skeleton3D.txt
+GT: 4	OUR: 4	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a04_s08_e01_skeleton3D.txt
+GT: 4	OUR: 4	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a04_s08_e02_skeleton3D.txt
+GT: 4	OUR: 4	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a04_s08_e03_skeleton3D.txt
+GT: 4	OUR: 4	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a04_s10_e01_skeleton3D.txt
+GT: 4	OUR: 1	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a04_s10_e02_skeleton3D.txt
+GT: 4	OUR: 4	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a04_s10_e03_skeleton3D.txt
+GT: 4	OUR: 4	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a07_s02_e01_skeleton3D.txt
+GT: 7	OUR: 7	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a07_s02_e02_skeleton3D.txt
+GT: 7	OUR: 7	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a07_s02_e03_skeleton3D.txt
+GT: 7	OUR: 7	TRUE
+Null action, not tested!
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a07_s04_e02_skeleton3D.txt
+GT: 7	OUR: 12	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a07_s06_e01_skeleton3D.txt
+GT: 7	OUR: 7	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a07_s06_e02_skeleton3D.txt
+GT: 7	OUR: 7	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a07_s06_e03_skeleton3D.txt
+GT: 7	OUR: 1	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a07_s08_e01_skeleton3D.txt
+GT: 7	OUR: 7	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a07_s08_e02_skeleton3D.txt
+GT: 7	OUR: 7	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a07_s08_e03_skeleton3D.txt
+GT: 7	OUR: 7	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a07_s10_e01_skeleton3D.txt
+GT: 7	OUR: 9	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a07_s10_e02_skeleton3D.txt
+GT: 7	OUR: 7	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a07_s10_e03_skeleton3D.txt
+GT: 7	OUR: 7	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a08_s02_e01_skeleton3D.txt
+GT: 8	OUR: 8	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a08_s02_e02_skeleton3D.txt
+GT: 8	OUR: 8	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a08_s02_e03_skeleton3D.txt
+GT: 8	OUR: 8	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a08_s04_e01_skeleton3D.txt
+GT: 8	OUR: 8	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a08_s04_e02_skeleton3D.txt
+GT: 8	OUR: 8	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a08_s04_e03_skeleton3D.txt
+GT: 8	OUR: 8	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a08_s06_e01_skeleton3D.txt
+GT: 8	OUR: 8	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a08_s06_e02_skeleton3D.txt
+GT: 8	OUR: 8	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a08_s06_e03_skeleton3D.txt
+GT: 8	OUR: 8	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a08_s08_e01_skeleton3D.txt
+GT: 8	OUR: 8	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a08_s08_e02_skeleton3D.txt
+GT: 8	OUR: 8	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a08_s08_e03_skeleton3D.txt
+GT: 8	OUR: 8	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a08_s10_e01_skeleton3D.txt
+GT: 8	OUR: 8	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a08_s10_e02_skeleton3D.txt
+GT: 8	OUR: 8	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a08_s10_e03_skeleton3D.txt
+GT: 8	OUR: 8	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a09_s02_e01_skeleton3D.txt
+GT: 9	OUR: 9	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a09_s02_e02_skeleton3D.txt
+GT: 9	OUR: 9	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a09_s02_e03_skeleton3D.txt
+GT: 9	OUR: 7	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a09_s04_e01_skeleton3D.txt
+GT: 9	OUR: 9	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a09_s04_e02_skeleton3D.txt
+GT: 9	OUR: 9	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a09_s04_e03_skeleton3D.txt
+GT: 9	OUR: 9	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a09_s06_e01_skeleton3D.txt
+GT: 9	OUR: 9	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a09_s06_e02_skeleton3D.txt
+GT: 9	OUR: 9	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a09_s06_e03_skeleton3D.txt
+GT: 9	OUR: 9	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a09_s08_e01_skeleton3D.txt
+GT: 9	OUR: 9	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a09_s08_e02_skeleton3D.txt
+GT: 9	OUR: 9	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a09_s08_e03_skeleton3D.txt
+GT: 9	OUR: 9	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a09_s10_e01_skeleton3D.txt
+GT: 9	OUR: 9	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a09_s10_e02_skeleton3D.txt
+GT: 9	OUR: 9	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a09_s10_e03_skeleton3D.txt
+GT: 9	OUR: 9	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a11_s02_e01_skeleton3D.txt
+GT: 11	OUR: 11	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a11_s02_e02_skeleton3D.txt
+GT: 11	OUR: 11	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a11_s02_e03_skeleton3D.txt
+GT: 11	OUR: 11	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a11_s04_e01_skeleton3D.txt
+GT: 11	OUR: 11	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a11_s04_e02_skeleton3D.txt
+GT: 11	OUR: 11	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a11_s04_e03_skeleton3D.txt
+GT: 11	OUR: 11	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a11_s06_e01_skeleton3D.txt
+GT: 11	OUR: 11	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a11_s06_e02_skeleton3D.txt
+GT: 11	OUR: 11	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a11_s06_e03_skeleton3D.txt
+GT: 11	OUR: 11	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a11_s08_e01_skeleton3D.txt
+GT: 11	OUR: 11	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a11_s08_e02_skeleton3D.txt
+GT: 11	OUR: 11	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a11_s08_e03_skeleton3D.txt
+GT: 11	OUR: 11	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a11_s10_e01_skeleton3D.txt
+GT: 11	OUR: 11	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a11_s10_e02_skeleton3D.txt
+GT: 11	OUR: 11	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a11_s10_e03_skeleton3D.txt
+GT: 11	OUR: 11	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a12_s02_e01_skeleton3D.txt
+GT: 12	OUR: 12	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a12_s02_e02_skeleton3D.txt
+GT: 12	OUR: 12	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a12_s02_e03_skeleton3D.txt
+GT: 12	OUR: 12	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a12_s04_e01_skeleton3D.txt
+GT: 12	OUR: 12	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a12_s04_e02_skeleton3D.txt
+GT: 12	OUR: 12	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a12_s04_e03_skeleton3D.txt
+GT: 12	OUR: 12	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a12_s06_e01_skeleton3D.txt
+GT: 12	OUR: 12	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a12_s06_e02_skeleton3D.txt
+GT: 12	OUR: 12	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a12_s06_e03_skeleton3D.txt
+GT: 12	OUR: 12	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a12_s08_e01_skeleton3D.txt
+GT: 12	OUR: 12	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a12_s08_e02_skeleton3D.txt
+GT: 12	OUR: 12	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a12_s08_e03_skeleton3D.txt
+GT: 12	OUR: 12	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a12_s10_e01_skeleton3D.txt
+GT: 12	OUR: 12	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a12_s10_e02_skeleton3D.txt
+GT: 12	OUR: 12	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a12_s10_e03_skeleton3D.txt
+GT: 12	OUR: 12	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s02_e01_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s02_e02_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s02_e03_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s04_e01_skeleton3D.txt
+GT: 14	OUR: 1	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s04_e02_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s04_e03_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s06_e01_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s06_e02_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s06_e03_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s08_e01_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s08_e02_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s08_e03_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s10_e01_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s10_e02_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s10_e03_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Classification: 0.901786%
+LIST NAMES: Loaded 114 files for training...
+LIST NAMES: Loaded 112 files for testing...
+New HMM created, label: 6
+HMM initialized.
+Training...
+Saving...
+
+Features NULL, action discarded
+New HMM created, label: 14
+HMM initialized.
+Training...
+Saving...
+
+New HMM created, label: 15
+HMM initialized.
+Training...
+Saving...
+
+New HMM created, label: 16
+HMM initialized.
+Training...
+Saving...
+
+New HMM created, label: 17
+HMM initialized.
+Training...
+Saving...
+
+New HMM created, label: 18
+HMM initialized.
+Training...
+Saving...
+
+New HMM created, label: 19
+HMM initialized.
+Training...
+Saving...
+
+Features NULL, action discarded
+Features NULL, action discarded
+New HMM created, label: 20
+HMM initialized.
+Training...
+Saving...
+
+HMMs loaded: 8
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a06_s02_e01_skeleton3D.txt
+GT: 6	OUR: 18	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a06_s02_e02_skeleton3D.txt
+GT: 6	OUR: 18	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a06_s02_e03_skeleton3D.txt
+GT: 6	OUR: 18	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a06_s06_e01_skeleton3D.txt
+GT: 6	OUR: 6	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a06_s06_e02_skeleton3D.txt
+GT: 6	OUR: 6	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a06_s08_e01_skeleton3D.txt
+GT: 6	OUR: 6	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a06_s08_e02_skeleton3D.txt
+GT: 6	OUR: 6	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a06_s08_e03_skeleton3D.txt
+GT: 6	OUR: 6	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a06_s10_e01_skeleton3D.txt
+GT: 6	OUR: 6	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a06_s10_e02_skeleton3D.txt
+GT: 6	OUR: 6	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a06_s10_e03_skeleton3D.txt
+GT: 6	OUR: 6	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s02_e01_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s02_e02_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s02_e03_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s04_e01_skeleton3D.txt
+GT: 14	OUR: 15	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s04_e02_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s04_e03_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s06_e01_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s06_e02_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s06_e03_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s08_e01_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s08_e02_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s08_e03_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s10_e01_skeleton3D.txt
+GT: 14	OUR: 15	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s10_e02_skeleton3D.txt
+GT: 14	OUR: 15	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s10_e03_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a15_s02_e01_skeleton3D.txt
+GT: 15	OUR: 15	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a15_s02_e02_skeleton3D.txt
+GT: 15	OUR: 15	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a15_s06_e01_skeleton3D.txt
+GT: 15	OUR: 15	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a15_s06_e02_skeleton3D.txt
+GT: 15	OUR: 14	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a15_s06_e03_skeleton3D.txt
+GT: 15	OUR: 15	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a15_s08_e01_skeleton3D.txt
+GT: 15	OUR: 15	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a15_s08_e02_skeleton3D.txt
+GT: 15	OUR: 15	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a15_s08_e03_skeleton3D.txt
+GT: 15	OUR: 15	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a15_s10_e01_skeleton3D.txt
+GT: 15	OUR: 15	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a15_s10_e02_skeleton3D.txt
+GT: 15	OUR: 15	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a15_s10_e03_skeleton3D.txt
+GT: 15	OUR: 15	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a16_s02_e01_skeleton3D.txt
+GT: 16	OUR: 16	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a16_s02_e02_skeleton3D.txt
+GT: 16	OUR: 16	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a16_s02_e03_skeleton3D.txt
+GT: 16	OUR: 16	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a16_s04_e01_skeleton3D.txt
+GT: 16	OUR: 16	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a16_s04_e02_skeleton3D.txt
+GT: 16	OUR: 16	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a16_s04_e03_skeleton3D.txt
+GT: 16	OUR: 16	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a16_s06_e01_skeleton3D.txt
+GT: 16	OUR: 16	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a16_s06_e02_skeleton3D.txt
+GT: 16	OUR: 15	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a16_s06_e03_skeleton3D.txt
+GT: 16	OUR: 15	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a16_s08_e01_skeleton3D.txt
+GT: 16	OUR: 16	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a16_s08_e02_skeleton3D.txt
+GT: 16	OUR: 16	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a16_s08_e03_skeleton3D.txt
+GT: 16	OUR: 16	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a16_s10_e01_skeleton3D.txt
+GT: 16	OUR: 16	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a16_s10_e02_skeleton3D.txt
+GT: 16	OUR: 16	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a16_s10_e03_skeleton3D.txt
+GT: 16	OUR: 16	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a17_s02_e01_skeleton3D.txt
+GT: 17	OUR: 17	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a17_s02_e02_skeleton3D.txt
+GT: 17	OUR: 17	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a17_s02_e03_skeleton3D.txt
+GT: 17	OUR: 17	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a17_s04_e01_skeleton3D.txt
+GT: 17	OUR: 17	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a17_s04_e02_skeleton3D.txt
+GT: 17	OUR: 17	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a17_s04_e03_skeleton3D.txt
+GT: 17	OUR: 17	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a17_s06_e01_skeleton3D.txt
+GT: 17	OUR: 17	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a17_s06_e02_skeleton3D.txt
+GT: 17	OUR: 17	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a17_s06_e03_skeleton3D.txt
+GT: 17	OUR: 17	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a17_s08_e01_skeleton3D.txt
+GT: 17	OUR: 17	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a17_s08_e02_skeleton3D.txt
+GT: 17	OUR: 17	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a17_s08_e03_skeleton3D.txt
+GT: 17	OUR: 17	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a17_s10_e01_skeleton3D.txt
+GT: 17	OUR: 17	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a17_s10_e02_skeleton3D.txt
+GT: 17	OUR: 17	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a17_s10_e03_skeleton3D.txt
+GT: 17	OUR: 17	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s02_e01_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s02_e02_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s02_e03_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s04_e01_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s04_e02_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s04_e03_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s06_e01_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s06_e02_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s06_e03_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s08_e01_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s08_e02_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s08_e03_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s10_e01_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s10_e02_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s10_e03_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a19_s02_e01_skeleton3D.txt
+GT: 19	OUR: 19	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a19_s02_e02_skeleton3D.txt
+GT: 19	OUR: 19	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a19_s02_e03_skeleton3D.txt
+GT: 19	OUR: 19	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a19_s04_e01_skeleton3D.txt
+GT: 19	OUR: 19	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a19_s04_e02_skeleton3D.txt
+GT: 19	OUR: 19	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a19_s04_e03_skeleton3D.txt
+GT: 19	OUR: 19	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a19_s06_e01_skeleton3D.txt
+GT: 19	OUR: 19	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a19_s06_e02_skeleton3D.txt
+GT: 19	OUR: 19	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a19_s06_e03_skeleton3D.txt
+GT: 19	OUR: 19	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a19_s08_e01_skeleton3D.txt
+GT: 19	OUR: 19	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a19_s08_e02_skeleton3D.txt
+GT: 19	OUR: 18	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a19_s08_e03_skeleton3D.txt
+GT: 19	OUR: 18	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a19_s10_e01_skeleton3D.txt
+GT: 19	OUR: 19	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a19_s10_e02_skeleton3D.txt
+GT: 19	OUR: 19	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a19_s10_e03_skeleton3D.txt
+GT: 19	OUR: 19	TRUE
+Null action, not tested!
+Null action, not tested!
+Null action, not tested!
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a20_s04_e01_skeleton3D.txt
+GT: 20	OUR: 19	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a20_s04_e02_skeleton3D.txt
+GT: 20	OUR: 20	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a20_s04_e03_skeleton3D.txt
+GT: 20	OUR: 20	TRUE
+Null action, not tested!
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a20_s06_e02_skeleton3D.txt
+GT: 20	OUR: 19	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a20_s06_e03_skeleton3D.txt
+GT: 20	OUR: 20	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a20_s08_e01_skeleton3D.txt
+GT: 20	OUR: 20	TRUE
+Null action, not tested!
+Null action, not tested!
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a20_s10_e01_skeleton3D.txt
+GT: 20	OUR: 19	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a20_s10_e02_skeleton3D.txt
+GT: 20	OUR: 20	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a20_s10_e03_skeleton3D.txt
+GT: 20	OUR: 19	FALSE
+Classification: 0.858491%
+LIST NAMES: Loaded 292 files for training...
+LIST NAMES: Loaded 275 files for testing...
+New HMM created, label: 1
+HMM initialized.
+Training...
+Saving...
+
+New HMM created, label: 2
+HMM initialized.
+Training...
+Saving...
+
+New HMM created, label: 3
+HMM initialized.
+Training...
+Saving...
+
+New HMM created, label: 4
+HMM initialized.
+Training...
+Saving...
+
+New HMM created, label: 5
+HMM initialized.
+Training...
+Saving...
+
+New HMM created, label: 6
+HMM initialized.
+Training...
+Saving...
+
+New HMM created, label: 7
+HMM initialized.
+Training...
+Saving...
+
+New HMM created, label: 8
+HMM initialized.
+Training...
+Saving...
+
+New HMM created, label: 9
+HMM initialized.
+Training...
+Saving...
+
+New HMM created, label: 10
+HMM initialized.
+Training...
+Saving...
+
+New HMM created, label: 11
+HMM initialized.
+Training...
+Saving...
+
+New HMM created, label: 12
+HMM initialized.
+Training...
+Saving...
+
+Features NULL, action discarded
+Features NULL, action discarded
+Features NULL, action discarded
+New HMM created, label: 13
+HMM initialized.
+Training...
+Saving...
+
+Features NULL, action discarded
+New HMM created, label: 14
+HMM initialized.
+Training...
+Saving...
+
+New HMM created, label: 15
+HMM initialized.
+Training...
+Saving...
+
+New HMM created, label: 16
+HMM initialized.
+Training...
+Saving...
+
+New HMM created, label: 17
+HMM initialized.
+Training...
+Saving...
+
+New HMM created, label: 18
+HMM initialized.
+Training...
+Saving...
+
+New HMM created, label: 19
+HMM initialized.
+Training...
+Saving...
+
+Features NULL, action discarded
+Features NULL, action discarded
+New HMM created, label: 20
+HMM initialized.
+Training...
+Saving...
+
+HMMs loaded: 20
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a01_s02_e01_skeleton3D.txt
+GT: 1	OUR: 1	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a01_s02_e02_skeleton3D.txt
+GT: 1	OUR: 13	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a01_s02_e03_skeleton3D.txt
+GT: 1	OUR: 18	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a01_s06_e01_skeleton3D.txt
+GT: 1	OUR: 1	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a01_s06_e02_skeleton3D.txt
+GT: 1	OUR: 8	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a01_s06_e03_skeleton3D.txt
+GT: 1	OUR: 1	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a01_s08_e01_skeleton3D.txt
+GT: 1	OUR: 1	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a01_s08_e02_skeleton3D.txt
+GT: 1	OUR: 1	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a01_s08_e03_skeleton3D.txt
+GT: 1	OUR: 1	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a01_s10_e01_skeleton3D.txt
+GT: 1	OUR: 1	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a01_s10_e02_skeleton3D.txt
+GT: 1	OUR: 1	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a01_s10_e03_skeleton3D.txt
+GT: 1	OUR: 1	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a02_s02_e01_skeleton3D.txt
+GT: 2	OUR: 2	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a02_s02_e02_skeleton3D.txt
+GT: 2	OUR: 2	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a02_s02_e03_skeleton3D.txt
+GT: 2	OUR: 2	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a02_s06_e01_skeleton3D.txt
+GT: 2	OUR: 2	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a02_s06_e02_skeleton3D.txt
+GT: 2	OUR: 9	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a02_s06_e03_skeleton3D.txt
+GT: 2	OUR: 2	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a02_s08_e01_skeleton3D.txt
+GT: 2	OUR: 2	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a02_s08_e02_skeleton3D.txt
+GT: 2	OUR: 19	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a02_s08_e03_skeleton3D.txt
+GT: 2	OUR: 2	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a02_s10_e01_skeleton3D.txt
+GT: 2	OUR: 2	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a02_s10_e02_skeleton3D.txt
+GT: 2	OUR: 2	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a02_s10_e03_skeleton3D.txt
+GT: 2	OUR: 2	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a03_s02_e01_skeleton3D.txt
+GT: 3	OUR: 17	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a03_s02_e02_skeleton3D.txt
+GT: 3	OUR: 17	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a03_s02_e03_skeleton3D.txt
+GT: 3	OUR: 3	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a03_s06_e01_skeleton3D.txt
+GT: 3	OUR: 3	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a03_s06_e02_skeleton3D.txt
+GT: 3	OUR: 6	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a03_s06_e03_skeleton3D.txt
+GT: 3	OUR: 4	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a03_s08_e01_skeleton3D.txt
+GT: 3	OUR: 3	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a03_s08_e02_skeleton3D.txt
+GT: 3	OUR: 3	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a03_s08_e03_skeleton3D.txt
+GT: 3	OUR: 3	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a03_s10_e01_skeleton3D.txt
+GT: 3	OUR: 8	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a03_s10_e02_skeleton3D.txt
+GT: 3	OUR: 8	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a03_s10_e03_skeleton3D.txt
+GT: 3	OUR: 9	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a04_s02_e01_skeleton3D.txt
+GT: 4	OUR: 4	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a04_s02_e02_skeleton3D.txt
+GT: 4	OUR: 4	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a04_s02_e03_skeleton3D.txt
+GT: 4	OUR: 4	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a04_s06_e01_skeleton3D.txt
+GT: 4	OUR: 5	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a04_s06_e02_skeleton3D.txt
+GT: 4	OUR: 8	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a04_s06_e03_skeleton3D.txt
+GT: 4	OUR: 4	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a04_s08_e01_skeleton3D.txt
+GT: 4	OUR: 4	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a04_s08_e02_skeleton3D.txt
+GT: 4	OUR: 4	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a04_s08_e03_skeleton3D.txt
+GT: 4	OUR: 4	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a04_s10_e01_skeleton3D.txt
+GT: 4	OUR: 6	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a04_s10_e02_skeleton3D.txt
+GT: 4	OUR: 6	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a04_s10_e03_skeleton3D.txt
+GT: 4	OUR: 6	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a05_s02_e01_skeleton3D.txt
+GT: 5	OUR: 17	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a05_s02_e02_skeleton3D.txt
+GT: 5	OUR: 17	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a05_s02_e03_skeleton3D.txt
+GT: 5	OUR: 12	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a05_s06_e01_skeleton3D.txt
+GT: 5	OUR: 5	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a05_s06_e02_skeleton3D.txt
+GT: 5	OUR: 5	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a05_s08_e01_skeleton3D.txt
+GT: 5	OUR: 5	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a05_s08_e02_skeleton3D.txt
+GT: 5	OUR: 5	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a05_s08_e03_skeleton3D.txt
+GT: 5	OUR: 5	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a05_s10_e01_skeleton3D.txt
+GT: 5	OUR: 5	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a05_s10_e02_skeleton3D.txt
+GT: 5	OUR: 5	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a05_s10_e03_skeleton3D.txt
+GT: 5	OUR: 5	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a06_s02_e01_skeleton3D.txt
+GT: 6	OUR: 18	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a06_s02_e02_skeleton3D.txt
+GT: 6	OUR: 18	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a06_s02_e03_skeleton3D.txt
+GT: 6	OUR: 12	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a06_s06_e01_skeleton3D.txt
+GT: 6	OUR: 6	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a06_s06_e02_skeleton3D.txt
+GT: 6	OUR: 6	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a06_s08_e01_skeleton3D.txt
+GT: 6	OUR: 6	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a06_s08_e02_skeleton3D.txt
+GT: 6	OUR: 6	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a06_s08_e03_skeleton3D.txt
+GT: 6	OUR: 5	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a06_s10_e01_skeleton3D.txt
+GT: 6	OUR: 6	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a06_s10_e02_skeleton3D.txt
+GT: 6	OUR: 6	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a06_s10_e03_skeleton3D.txt
+GT: 6	OUR: 6	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a07_s02_e01_skeleton3D.txt
+GT: 7	OUR: 7	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a07_s02_e02_skeleton3D.txt
+GT: 7	OUR: 7	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a07_s02_e03_skeleton3D.txt
+GT: 7	OUR: 7	TRUE
+Null action, not tested!
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a07_s04_e02_skeleton3D.txt
+GT: 7	OUR: 12	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a07_s06_e01_skeleton3D.txt
+GT: 7	OUR: 7	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a07_s06_e02_skeleton3D.txt
+GT: 7	OUR: 7	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a07_s06_e03_skeleton3D.txt
+GT: 7	OUR: 2	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a07_s08_e01_skeleton3D.txt
+GT: 7	OUR: 7	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a07_s08_e02_skeleton3D.txt
+GT: 7	OUR: 7	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a07_s08_e03_skeleton3D.txt
+GT: 7	OUR: 7	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a07_s10_e01_skeleton3D.txt
+GT: 7	OUR: 9	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a07_s10_e02_skeleton3D.txt
+GT: 7	OUR: 7	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a07_s10_e03_skeleton3D.txt
+GT: 7	OUR: 7	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a08_s02_e01_skeleton3D.txt
+GT: 8	OUR: 8	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a08_s02_e02_skeleton3D.txt
+GT: 8	OUR: 8	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a08_s02_e03_skeleton3D.txt
+GT: 8	OUR: 8	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a08_s04_e01_skeleton3D.txt
+GT: 8	OUR: 8	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a08_s04_e02_skeleton3D.txt
+GT: 8	OUR: 8	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a08_s04_e03_skeleton3D.txt
+GT: 8	OUR: 8	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a08_s06_e01_skeleton3D.txt
+GT: 8	OUR: 8	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a08_s06_e02_skeleton3D.txt
+GT: 8	OUR: 8	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a08_s06_e03_skeleton3D.txt
+GT: 8	OUR: 8	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a08_s08_e01_skeleton3D.txt
+GT: 8	OUR: 8	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a08_s08_e02_skeleton3D.txt
+GT: 8	OUR: 8	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a08_s08_e03_skeleton3D.txt
+GT: 8	OUR: 8	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a08_s10_e01_skeleton3D.txt
+GT: 8	OUR: 8	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a08_s10_e02_skeleton3D.txt
+GT: 8	OUR: 8	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a08_s10_e03_skeleton3D.txt
+GT: 8	OUR: 8	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a09_s02_e01_skeleton3D.txt
+GT: 9	OUR: 9	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a09_s02_e02_skeleton3D.txt
+GT: 9	OUR: 9	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a09_s02_e03_skeleton3D.txt
+GT: 9	OUR: 7	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a09_s04_e01_skeleton3D.txt
+GT: 9	OUR: 9	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a09_s04_e02_skeleton3D.txt
+GT: 9	OUR: 9	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a09_s04_e03_skeleton3D.txt
+GT: 9	OUR: 9	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a09_s06_e01_skeleton3D.txt
+GT: 9	OUR: 9	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a09_s06_e02_skeleton3D.txt
+GT: 9	OUR: 9	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a09_s06_e03_skeleton3D.txt
+GT: 9	OUR: 9	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a09_s08_e01_skeleton3D.txt
+GT: 9	OUR: 9	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a09_s08_e02_skeleton3D.txt
+GT: 9	OUR: 9	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a09_s08_e03_skeleton3D.txt
+GT: 9	OUR: 9	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a09_s10_e01_skeleton3D.txt
+GT: 9	OUR: 9	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a09_s10_e02_skeleton3D.txt
+GT: 9	OUR: 9	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a09_s10_e03_skeleton3D.txt
+GT: 9	OUR: 9	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a10_s02_e01_skeleton3D.txt
+GT: 10	OUR: 10	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a10_s02_e02_skeleton3D.txt
+GT: 10	OUR: 10	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a10_s02_e03_skeleton3D.txt
+GT: 10	OUR: 10	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a10_s04_e01_skeleton3D.txt
+GT: 10	OUR: 10	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a10_s04_e02_skeleton3D.txt
+GT: 10	OUR: 10	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a10_s04_e03_skeleton3D.txt
+GT: 10	OUR: 10	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a10_s06_e01_skeleton3D.txt
+GT: 10	OUR: 10	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a10_s06_e02_skeleton3D.txt
+GT: 10	OUR: 10	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a10_s06_e03_skeleton3D.txt
+GT: 10	OUR: 11	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a10_s08_e01_skeleton3D.txt
+GT: 10	OUR: 10	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a10_s08_e02_skeleton3D.txt
+GT: 10	OUR: 10	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a10_s08_e03_skeleton3D.txt
+GT: 10	OUR: 10	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a10_s10_e01_skeleton3D.txt
+GT: 10	OUR: 10	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a10_s10_e02_skeleton3D.txt
+GT: 10	OUR: 10	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a10_s10_e03_skeleton3D.txt
+GT: 10	OUR: 10	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a11_s02_e01_skeleton3D.txt
+GT: 11	OUR: 10	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a11_s02_e02_skeleton3D.txt
+GT: 11	OUR: 11	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a11_s02_e03_skeleton3D.txt
+GT: 11	OUR: 11	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a11_s04_e01_skeleton3D.txt
+GT: 11	OUR: 11	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a11_s04_e02_skeleton3D.txt
+GT: 11	OUR: 11	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a11_s04_e03_skeleton3D.txt
+GT: 11	OUR: 11	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a11_s06_e01_skeleton3D.txt
+GT: 11	OUR: 11	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a11_s06_e02_skeleton3D.txt
+GT: 11	OUR: 11	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a11_s06_e03_skeleton3D.txt
+GT: 11	OUR: 11	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a11_s08_e01_skeleton3D.txt
+GT: 11	OUR: 10	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a11_s08_e02_skeleton3D.txt
+GT: 11	OUR: 11	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a11_s08_e03_skeleton3D.txt
+GT: 11	OUR: 10	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a11_s10_e01_skeleton3D.txt
+GT: 11	OUR: 11	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a11_s10_e02_skeleton3D.txt
+GT: 11	OUR: 11	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a11_s10_e03_skeleton3D.txt
+GT: 11	OUR: 11	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a12_s02_e01_skeleton3D.txt
+GT: 12	OUR: 19	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a12_s02_e02_skeleton3D.txt
+GT: 12	OUR: 12	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a12_s02_e03_skeleton3D.txt
+GT: 12	OUR: 12	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a12_s04_e01_skeleton3D.txt
+GT: 12	OUR: 17	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a12_s04_e02_skeleton3D.txt
+GT: 12	OUR: 12	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a12_s04_e03_skeleton3D.txt
+GT: 12	OUR: 12	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a12_s06_e01_skeleton3D.txt
+GT: 12	OUR: 12	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a12_s06_e02_skeleton3D.txt
+GT: 12	OUR: 12	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a12_s06_e03_skeleton3D.txt
+GT: 12	OUR: 12	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a12_s08_e01_skeleton3D.txt
+GT: 12	OUR: 12	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a12_s08_e02_skeleton3D.txt
+GT: 12	OUR: 12	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a12_s08_e03_skeleton3D.txt
+GT: 12	OUR: 12	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a12_s10_e01_skeleton3D.txt
+GT: 12	OUR: 12	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a12_s10_e02_skeleton3D.txt
+GT: 12	OUR: 12	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a12_s10_e03_skeleton3D.txt
+GT: 12	OUR: 12	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a13_s02_e01_skeleton3D.txt
+GT: 13	OUR: 13	TRUE
+Null action, not tested!
+Null action, not tested!
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a13_s04_e01_skeleton3D.txt
+GT: 13	OUR: 13	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a13_s04_e02_skeleton3D.txt
+GT: 13	OUR: 13	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a13_s04_e03_skeleton3D.txt
+GT: 13	OUR: 13	TRUE
+Null action, not tested!
+Null action, not tested!
+Null action, not tested!
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a13_s08_e01_skeleton3D.txt
+GT: 13	OUR: 19	FALSE
+Null action, not tested!
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a13_s08_e03_skeleton3D.txt
+GT: 13	OUR: 13	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a13_s10_e01_skeleton3D.txt
+GT: 13	OUR: 13	TRUE
+Null action, not tested!
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a13_s10_e03_skeleton3D.txt
+GT: 13	OUR: 13	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s02_e01_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s02_e02_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s02_e03_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s04_e01_skeleton3D.txt
+GT: 14	OUR: 15	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s04_e02_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s04_e03_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s06_e01_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s06_e02_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s06_e03_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s08_e01_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s08_e02_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s08_e03_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s10_e01_skeleton3D.txt
+GT: 14	OUR: 15	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s10_e02_skeleton3D.txt
+GT: 14	OUR: 15	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a14_s10_e03_skeleton3D.txt
+GT: 14	OUR: 14	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a15_s02_e01_skeleton3D.txt
+GT: 15	OUR: 15	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a15_s02_e02_skeleton3D.txt
+GT: 15	OUR: 15	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a15_s06_e01_skeleton3D.txt
+GT: 15	OUR: 15	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a15_s06_e02_skeleton3D.txt
+GT: 15	OUR: 14	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a15_s06_e03_skeleton3D.txt
+GT: 15	OUR: 15	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a15_s08_e01_skeleton3D.txt
+GT: 15	OUR: 15	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a15_s08_e02_skeleton3D.txt
+GT: 15	OUR: 15	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a15_s08_e03_skeleton3D.txt
+GT: 15	OUR: 15	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a15_s10_e01_skeleton3D.txt
+GT: 15	OUR: 15	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a15_s10_e02_skeleton3D.txt
+GT: 15	OUR: 15	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a15_s10_e03_skeleton3D.txt
+GT: 15	OUR: 15	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a16_s02_e01_skeleton3D.txt
+GT: 16	OUR: 16	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a16_s02_e02_skeleton3D.txt
+GT: 16	OUR: 16	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a16_s02_e03_skeleton3D.txt
+GT: 16	OUR: 16	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a16_s04_e01_skeleton3D.txt
+GT: 16	OUR: 16	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a16_s04_e02_skeleton3D.txt
+GT: 16	OUR: 16	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a16_s04_e03_skeleton3D.txt
+GT: 16	OUR: 16	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a16_s06_e01_skeleton3D.txt
+GT: 16	OUR: 16	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a16_s06_e02_skeleton3D.txt
+GT: 16	OUR: 15	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a16_s06_e03_skeleton3D.txt
+GT: 16	OUR: 15	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a16_s08_e01_skeleton3D.txt
+GT: 16	OUR: 16	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a16_s08_e02_skeleton3D.txt
+GT: 16	OUR: 16	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a16_s08_e03_skeleton3D.txt
+GT: 16	OUR: 16	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a16_s10_e01_skeleton3D.txt
+GT: 16	OUR: 16	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a16_s10_e02_skeleton3D.txt
+GT: 16	OUR: 16	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a16_s10_e03_skeleton3D.txt
+GT: 16	OUR: 16	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a17_s02_e01_skeleton3D.txt
+GT: 17	OUR: 17	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a17_s02_e02_skeleton3D.txt
+GT: 17	OUR: 17	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a17_s02_e03_skeleton3D.txt
+GT: 17	OUR: 17	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a17_s04_e01_skeleton3D.txt
+GT: 17	OUR: 17	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a17_s04_e02_skeleton3D.txt
+GT: 17	OUR: 17	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a17_s04_e03_skeleton3D.txt
+GT: 17	OUR: 17	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a17_s06_e01_skeleton3D.txt
+GT: 17	OUR: 17	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a17_s06_e02_skeleton3D.txt
+GT: 17	OUR: 17	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a17_s06_e03_skeleton3D.txt
+GT: 17	OUR: 17	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a17_s08_e01_skeleton3D.txt
+GT: 17	OUR: 17	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a17_s08_e02_skeleton3D.txt
+GT: 17	OUR: 17	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a17_s08_e03_skeleton3D.txt
+GT: 17	OUR: 17	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a17_s10_e01_skeleton3D.txt
+GT: 17	OUR: 17	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a17_s10_e02_skeleton3D.txt
+GT: 17	OUR: 17	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a17_s10_e03_skeleton3D.txt
+GT: 17	OUR: 17	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s02_e01_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s02_e02_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s02_e03_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s04_e01_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s04_e02_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s04_e03_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s06_e01_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s06_e02_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s06_e03_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s08_e01_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s08_e02_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s08_e03_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s10_e01_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s10_e02_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a18_s10_e03_skeleton3D.txt
+GT: 18	OUR: 18	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a19_s02_e01_skeleton3D.txt
+GT: 19	OUR: 19	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a19_s02_e02_skeleton3D.txt
+GT: 19	OUR: 19	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a19_s02_e03_skeleton3D.txt
+GT: 19	OUR: 19	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a19_s04_e01_skeleton3D.txt
+GT: 19	OUR: 19	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a19_s04_e02_skeleton3D.txt
+GT: 19	OUR: 19	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a19_s04_e03_skeleton3D.txt
+GT: 19	OUR: 19	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a19_s06_e01_skeleton3D.txt
+GT: 19	OUR: 19	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a19_s06_e02_skeleton3D.txt
+GT: 19	OUR: 19	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a19_s06_e03_skeleton3D.txt
+GT: 19	OUR: 19	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a19_s08_e01_skeleton3D.txt
+GT: 19	OUR: 19	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a19_s08_e02_skeleton3D.txt
+GT: 19	OUR: 18	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a19_s08_e03_skeleton3D.txt
+GT: 19	OUR: 18	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a19_s10_e01_skeleton3D.txt
+GT: 19	OUR: 19	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a19_s10_e02_skeleton3D.txt
+GT: 19	OUR: 19	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a19_s10_e03_skeleton3D.txt
+GT: 19	OUR: 19	TRUE
+Null action, not tested!
+Null action, not tested!
+Null action, not tested!
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a20_s04_e01_skeleton3D.txt
+GT: 20	OUR: 13	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a20_s04_e02_skeleton3D.txt
+GT: 20	OUR: 20	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a20_s04_e03_skeleton3D.txt
+GT: 20	OUR: 20	TRUE
+Null action, not tested!
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a20_s06_e02_skeleton3D.txt
+GT: 20	OUR: 13	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a20_s06_e03_skeleton3D.txt
+GT: 20	OUR: 20	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a20_s08_e01_skeleton3D.txt
+GT: 20	OUR: 20	TRUE
+Null action, not tested!
+Null action, not tested!
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a20_s10_e01_skeleton3D.txt
+GT: 20	OUR: 19	FALSE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a20_s10_e02_skeleton3D.txt
+GT: 20	OUR: 20	TRUE
+Sequence: E:\Google Drive\Progetti\MSR Action3D\Real\a20_s10_e03_skeleton3D.txt
+GT: 20	OUR: 13	FALSE
+Classification: 0.819923%

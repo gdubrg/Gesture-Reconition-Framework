@@ -1,0 +1,15 @@
+a01_s01_e01_skeleton3D.txt
+a01_s01_e02_skeleton3D.txt
+a01_s01_e03_skeleton3D.txt
+a01_s03_e01_skeleton3D.txt
+a01_s03_e02_skeleton3D.txt
+a01_s03_e03_skeleton3D.txt
+a01_s05_e01_skeleton3D.txt
+a01_s05_e02_skeleton3D.txt
+a01_s05_e03_skeleton3D.txt
+a01_s07_e01_skeleton3D.txt
+a01_s07_e02_skeleton3D.txt
+a01_s07_e03_skeleton3D.txt
+a01_s09_e01_skeleton3D.txt
+a01_s09_e02_skeleton3D.txt
+a01_s09_e03_skeleton3D.txt

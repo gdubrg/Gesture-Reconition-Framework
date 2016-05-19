@@ -1,0 +1,30 @@
+{
+    "Annotations": [
+        {
+            "Begin": 26,
+            "End":54,
+            "Type Action": "Point"
+        },
+        {
+            "Begin": 69,
+            "End": 108,
+            "Type Action": "Point"
+        },
+        {
+            "Begin": 110,
+            "End": 124,
+            "Type Action": "Point"
+        },
+        {
+            "Begin": 143,
+            "End": 179,
+            "Type Action": "Rotate"
+        },
+        {
+            "Begin": 185,
+            "End": 225,
+            "Type Action": "Rotate"
+        }
+    ],
+    "Length": 235
+}

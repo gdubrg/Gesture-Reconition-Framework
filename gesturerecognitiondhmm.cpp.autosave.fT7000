@@ -1,0 +1,973 @@
+#include "gesturerecognitiondhmm.h"
+#include "dirent.h"
+#include <time.h>
+#include <fstream>
+
+using namespace std;
+using namespace cv;
+
+static const unsigned int centroids = 10;
+
+GestureRecognitionDHMM::GestureRecognitionDHMM()
+{
+
+}
+
+void GestureRecognitionDHMM::recognize(FrameSet &frame){
+
+}
+
+double InsertAndMeanQ(list<double>& l, double val){
+
+    int maxSize = 5;
+
+    //Inserisco elemento mantenendo costante il numero
+    if(l.size() < maxSize)
+        l.push_back(val);
+    else{
+        l.pop_front();
+        l.push_back(val);
+    }
+
+    //Calcolo la somma degli elementi
+    list<double>::iterator it = l.begin();
+    double sum = 0;
+    for(int i=0;i<l.size();++i){
+        advance(it, i);
+        sum += *it;
+    }
+    return (sum/l.size());
+}
+
+int quant(float curVal, int k, float v){
+
+    int q;
+
+    for(auto i=-(k/2); i<(k/2); ++i){
+        float down = v*i;
+        float top = v*(i+1);
+        if( (curVal >= down) && (curVal < top) ){
+            q = i + (k/2);
+            return q;
+        }
+    }
+}
+
+template <typename _T>
+vector<vector<unsigned int>> featureQuant(vector<vector<double>> action, _T ts){
+
+    vector<unsigned int> quantSingleFrame;
+    vector<vector<unsigned int>> quantSingleAction;
+    //vector<vector<vector<unsigned int>>> quantActions;
+
+
+    //For each frame
+    for (auto i=0; i<action.size(); ++i){
+
+        //Lunghezza da quantizzare
+        float l = (ts._l)*2;
+
+        //Valore singola parte
+        float v = l / (float)ts._k;//centroids;
+
+        //Valore quanto
+        int q;
+
+        //for each double value (36)
+        for(auto j=0; j<action[0].size(); ++j)
+            quantSingleFrame.push_back(quant(action[i][j], ts._k, v));
+
+        //memorizzo frame
+        quantSingleAction.push_back(quantSingleFrame);
+        quantSingleFrame.clear();
+
+    }//end frame
+
+    //debug
+    //        ofstream out("quant.txt");
+    //        for(auto i=0;i<quantSingleAction.size();++i)
+    //            out << quantSingleAction[i][0] << "\n";
+    //        out.close();
+
+    //memorizzo azione
+    //quantActions.push_back(quantSingleAction);
+    //quantSingleAction.clear();
+
+
+    return quantSingleAction;
+}
+
+vector<double> getAVLFeaturesQ(FrameSet old2, FrameSet old1, FrameSet curr){
+    vector<double> vFrameFeatures;
+    double val;
+
+    //HAND RIGHT------------------------------------------------
+
+    //ACCELERAZIONE
+    val = (curr.bodyJoint[FS_handRight].x - old1.bodyJoint[FS_handRight].x) - (old1.bodyJoint[FS_handRight].x - old2.bodyJoint[FS_handRight].x);
+    vFrameFeatures.push_back(val);
+    val = (curr.bodyJoint[FS_handRight].y - old1.bodyJoint[FS_handRight].y) - (old1.bodyJoint[FS_handRight].y - old2.bodyJoint[FS_handRight].y);
+    vFrameFeatures.push_back(val);
+    val = (curr.bodyJoint[FS_handRight].z - old1.bodyJoint[FS_handRight].z) - (old1.bodyJoint[FS_handRight].z - old2.bodyJoint[FS_handRight].z);
+    vFrameFeatures.push_back(val);
+
+    //VELOCITA
+    val = curr.bodyJoint[FS_handRight].x - old1.bodyJoint[FS_handRight].x;
+    vFrameFeatures.push_back(val);
+    val = curr.bodyJoint[FS_handRight].y - old1.bodyJoint[FS_handRight].y;
+    vFrameFeatures.push_back(val);
+    val = curr.bodyJoint[FS_handRight].z - old1.bodyJoint[FS_handRight].z;
+    vFrameFeatures.push_back(val);
+
+    //OFFSET
+    val = curr.bodyJoint[FS_handRight].x - curr.bodyJoint[FS_hipCenter].x;
+    vFrameFeatures.push_back(val);
+    val = curr.bodyJoint[FS_handRight].y - curr.bodyJoint[FS_hipCenter].y;
+    vFrameFeatures.push_back(val);
+    val = curr.bodyJoint[FS_handRight].z - curr.bodyJoint[FS_hipCenter].z;
+    vFrameFeatures.push_back(val);
+
+
+    //ELBOW RIGHT----------------------------------------------
+
+    //ACCELERAZIONE
+    val = (curr.bodyJoint[FS_elbowRight].x - old1.bodyJoint[FS_elbowRight].x) - (old1.bodyJoint[FS_elbowRight].x - old2.bodyJoint[FS_elbowRight].x);
+    vFrameFeatures.push_back(val);
+    val = (curr.bodyJoint[FS_elbowRight].y - old1.bodyJoint[FS_elbowRight].y) - (old1.bodyJoint[FS_elbowRight].y - old2.bodyJoint[FS_elbowRight].y);
+    vFrameFeatures.push_back(val);
+    val = (curr.bodyJoint[FS_elbowRight].z - old1.bodyJoint[FS_elbowRight].z) - (old1.bodyJoint[FS_elbowRight].z - old2.bodyJoint[FS_elbowRight].z);
+    vFrameFeatures.push_back(val);
+
+    //VELOCITA
+    val = curr.bodyJoint[FS_elbowRight].x - old1.bodyJoint[FS_elbowRight].x;
+    vFrameFeatures.push_back(val);
+    val = curr.bodyJoint[FS_elbowRight].y - old1.bodyJoint[FS_elbowRight].y;
+    vFrameFeatures.push_back(val);
+    val = curr.bodyJoint[FS_elbowRight].z - old1.bodyJoint[FS_elbowRight].z;
+    vFrameFeatures.push_back(val);
+
+    //OFFSET
+    val = curr.bodyJoint[FS_elbowRight].x - curr.bodyJoint[FS_hipCenter].x;
+    vFrameFeatures.push_back(val);
+    val = curr.bodyJoint[FS_elbowRight].y - curr.bodyJoint[FS_hipCenter].y;
+    vFrameFeatures.push_back(val);
+    val = curr.bodyJoint[FS_elbowRight].z - curr.bodyJoint[FS_hipCenter].z;
+    vFrameFeatures.push_back(val);
+
+
+    //HAND LEFT--------------------------------------------------
+
+    //ACCELERAZIONE
+    val = (curr.bodyJoint[FS_handLeft].x - old1.bodyJoint[FS_handLeft].x) - (old1.bodyJoint[FS_handLeft].x - old2.bodyJoint[FS_handLeft].x);
+    vFrameFeatures.push_back(val);
+    val = (curr.bodyJoint[FS_handLeft].y - old1.bodyJoint[FS_handLeft].y) - (old1.bodyJoint[FS_handLeft].y - old2.bodyJoint[FS_handLeft].y);
+    vFrameFeatures.push_back(val);
+    val = (curr.bodyJoint[FS_handLeft].z - old1.bodyJoint[FS_handLeft].z) - (old1.bodyJoint[FS_handLeft].z - old2.bodyJoint[FS_handLeft].z);
+    vFrameFeatures.push_back(val);
+
+    //VELOCITA
+    val = curr.bodyJoint[FS_handLeft].x - old1.bodyJoint[FS_handLeft].x;
+    vFrameFeatures.push_back(val);
+    val = curr.bodyJoint[FS_handLeft].y - old1.bodyJoint[FS_handLeft].y;
+    vFrameFeatures.push_back(val);
+    val = curr.bodyJoint[FS_handLeft].z - old1.bodyJoint[FS_handLeft].z;
+    vFrameFeatures.push_back(val);
+
+    //OFFSET
+    val = curr.bodyJoint[FS_handLeft].x - curr.bodyJoint[FS_hipCenter].x;
+    vFrameFeatures.push_back(val);
+    val = curr.bodyJoint[FS_handLeft].y - curr.bodyJoint[FS_hipCenter].y;
+    vFrameFeatures.push_back(val);
+    val = curr.bodyJoint[FS_handLeft].z - curr.bodyJoint[FS_hipCenter].z;
+    vFrameFeatures.push_back(val);
+
+
+    //ELBOW LEFT---------------------------------------------------
+
+    //ACCELERAZIONE
+    val = (curr.bodyJoint[FS_elbowLeft].x - old1.bodyJoint[FS_elbowLeft].x) - (old1.bodyJoint[FS_elbowLeft].x - old2.bodyJoint[FS_elbowLeft].x);
+    vFrameFeatures.push_back(val);
+    val = (curr.bodyJoint[FS_elbowLeft].y - old1.bodyJoint[FS_elbowLeft].y) - (old1.bodyJoint[FS_elbowLeft].y - old2.bodyJoint[FS_elbowLeft].y);
+    vFrameFeatures.push_back(val);
+    val = (curr.bodyJoint[FS_elbowLeft].z - old1.bodyJoint[FS_elbowLeft].z) - (old1.bodyJoint[FS_elbowLeft].z - old2.bodyJoint[FS_elbowLeft].z);
+    vFrameFeatures.push_back(val);
+
+    //VELOCITA
+    val = curr.bodyJoint[FS_elbowLeft].x - old1.bodyJoint[FS_elbowLeft].x;
+    vFrameFeatures.push_back(val);
+    val = curr.bodyJoint[FS_elbowLeft].y - old1.bodyJoint[FS_elbowLeft].y;
+    vFrameFeatures.push_back(val);
+    val = curr.bodyJoint[FS_elbowLeft].z - old1.bodyJoint[FS_elbowLeft].z;
+    vFrameFeatures.push_back(val);
+
+    //OFFSET
+    val = curr.bodyJoint[FS_elbowLeft].x - curr.bodyJoint[FS_hipCenter].x;
+    vFrameFeatures.push_back(val);
+    val = curr.bodyJoint[FS_elbowLeft].y - curr.bodyJoint[FS_hipCenter].y;
+    vFrameFeatures.push_back(val);
+    val = curr.bodyJoint[FS_elbowLeft].z - curr.bodyJoint[FS_hipCenter].z;
+    vFrameFeatures.push_back(val);
+
+
+    //FOOT RIGHT---------------------------------------------
+
+    //ACCELERAZIONE
+    val = (curr.bodyJoint[FS_footRight].x - old1.bodyJoint[FS_footRight].x) - (old1.bodyJoint[FS_footRight].x - old2.bodyJoint[FS_footRight].x);
+    vFrameFeatures.push_back(val);
+    val = (curr.bodyJoint[FS_footRight].y - old1.bodyJoint[FS_footRight].y) - (old1.bodyJoint[FS_footRight].y - old2.bodyJoint[FS_footRight].y);
+    vFrameFeatures.push_back(val);
+    val = (curr.bodyJoint[FS_footRight].z - old1.bodyJoint[FS_footRight].z) - (old1.bodyJoint[FS_footRight].z - old2.bodyJoint[FS_footRight].z);
+    vFrameFeatures.push_back(val);
+
+    //VELOCITA
+    val = curr.bodyJoint[FS_footRight].x - old1.bodyJoint[FS_footRight].x;
+    vFrameFeatures.push_back(val);
+    val = curr.bodyJoint[FS_footRight].y - old1.bodyJoint[FS_footRight].y;
+    vFrameFeatures.push_back(val);
+    val = curr.bodyJoint[FS_footRight].z - old1.bodyJoint[FS_footRight].z;
+    vFrameFeatures.push_back(val);
+
+    //OFFSET
+    val = curr.bodyJoint[FS_footRight].x - curr.bodyJoint[FS_hipCenter].x;
+    vFrameFeatures.push_back(val);
+    val = curr.bodyJoint[FS_footRight].y - curr.bodyJoint[FS_hipCenter].y;
+    vFrameFeatures.push_back(val);
+    val = curr.bodyJoint[FS_footRight].z - curr.bodyJoint[FS_hipCenter].z;
+    vFrameFeatures.push_back(val);
+
+    //KNEE RIGHT---------------------------------------------
+
+//    //ACCELERAZIONE
+//    val = (curr.bodyJoint[FS_kneeRight].x - old1.bodyJoint[FS_kneeRight].x) - (old1.bodyJoint[FS_kneeRight].x - old2.bodyJoint[FS_kneeRight].x);
+//    vFrameFeatures.push_back(val);
+//    val = (curr.bodyJoint[FS_kneeRight].y - old1.bodyJoint[FS_kneeRight].y) - (old1.bodyJoint[FS_kneeRight].y - old2.bodyJoint[FS_kneeRight].y);
+//    vFrameFeatures.push_back(val);
+//    val = (curr.bodyJoint[FS_kneeRight].z - old1.bodyJoint[FS_kneeRight].z) - (old1.bodyJoint[FS_kneeRight].z - old2.bodyJoint[FS_kneeRight].z);
+//    vFrameFeatures.push_back(val);
+
+//    //VELOCITA
+//    val = curr.bodyJoint[FS_kneeRight].x - old1.bodyJoint[FS_kneeRight].x;
+//    vFrameFeatures.push_back(val);
+//    val = curr.bodyJoint[FS_kneeRight].y - old1.bodyJoint[FS_kneeRight].y;
+//    vFrameFeatures.push_back(val);
+//    val = curr.bodyJoint[FS_kneeRight].z - old1.bodyJoint[FS_kneeRight].z;
+//    vFrameFeatures.push_back(val);
+
+//    //OFFSET
+//    val = curr.bodyJoint[FS_kneeRight].x - curr.bodyJoint[FS_hipCenter].x;
+//    vFrameFeatures.push_back(val);
+//    val = curr.bodyJoint[FS_kneeRight].y - curr.bodyJoint[FS_hipCenter].y;
+//    vFrameFeatures.push_back(val);
+//    val = curr.bodyJoint[FS_kneeRight].z - curr.bodyJoint[FS_hipCenter].z;
+//    vFrameFeatures.push_back(val);
+
+
+    //FOOT LEFT------------------------------------
+
+    //ACCELERAZIONE
+    val = (curr.bodyJoint[FS_footLeft].x - old1.bodyJoint[FS_footLeft].x) - (old1.bodyJoint[FS_footLeft].x - old2.bodyJoint[FS_footLeft].x);
+    vFrameFeatures.push_back(val);
+    val = (curr.bodyJoint[FS_footLeft].y - old1.bodyJoint[FS_footLeft].y) - (old1.bodyJoint[FS_footLeft].y - old2.bodyJoint[FS_footLeft].y);
+    vFrameFeatures.push_back(val);
+    val = (curr.bodyJoint[FS_footLeft].z - old1.bodyJoint[FS_footLeft].z) - (old1.bodyJoint[FS_footLeft].z - old2.bodyJoint[FS_footLeft].z);
+    vFrameFeatures.push_back(val);
+
+    //VELOCITA
+    val = curr.bodyJoint[FS_footLeft].x - old1.bodyJoint[FS_footLeft].x;
+    vFrameFeatures.push_back(val);
+    val = curr.bodyJoint[FS_footLeft].y - old1.bodyJoint[FS_footLeft].y;
+    vFrameFeatures.push_back(val);
+    val = curr.bodyJoint[FS_footLeft].z - old1.bodyJoint[FS_footLeft].z;
+    vFrameFeatures.push_back(val);
+
+    //OFFSET
+    val = curr.bodyJoint[FS_footLeft].x - curr.bodyJoint[FS_hipCenter].x;
+    vFrameFeatures.push_back(val);
+    val = curr.bodyJoint[FS_footLeft].y - curr.bodyJoint[FS_hipCenter].y;
+    vFrameFeatures.push_back(val);
+    val = curr.bodyJoint[FS_footLeft].z - curr.bodyJoint[FS_hipCenter].z;
+    vFrameFeatures.push_back(val);
+
+
+    //KNEE LEFT------------------------------------
+
+//    //ACCELERAZIONE
+//    val = (curr.bodyJoint[FS_kneeLeft].x - old1.bodyJoint[FS_kneeLeft].x) - (old1.bodyJoint[FS_kneeLeft].x - old2.bodyJoint[FS_kneeLeft].x);
+//    vFrameFeatures.push_back(val);
+//    val = (curr.bodyJoint[FS_kneeLeft].y - old1.bodyJoint[FS_kneeLeft].y) - (old1.bodyJoint[FS_kneeLeft].y - old2.bodyJoint[FS_kneeLeft].y);
+//    vFrameFeatures.push_back(val);
+//    val = (curr.bodyJoint[FS_kneeLeft].z - old1.bodyJoint[FS_kneeLeft].z) - (old1.bodyJoint[FS_kneeLeft].z - old2.bodyJoint[FS_kneeLeft].z);
+//    vFrameFeatures.push_back(val);
+
+//    //VELOCITA
+//    val = curr.bodyJoint[FS_kneeLeft].x - old1.bodyJoint[FS_kneeLeft].x;
+//    vFrameFeatures.push_back(val);
+//    val = curr.bodyJoint[FS_kneeLeft].y - old1.bodyJoint[FS_kneeLeft].y;
+//    vFrameFeatures.push_back(val);
+//    val = curr.bodyJoint[FS_kneeLeft].z - old1.bodyJoint[FS_kneeLeft].z;
+//    vFrameFeatures.push_back(val);
+
+//    //OFFSET
+//    val = curr.bodyJoint[FS_kneeLeft].x - curr.bodyJoint[FS_hipCenter].x;
+//    vFrameFeatures.push_back(val);
+//    val = curr.bodyJoint[FS_kneeLeft].y - curr.bodyJoint[FS_hipCenter].y;
+//    vFrameFeatures.push_back(val);
+//    val = curr.bodyJoint[FS_kneeLeft].z - curr.bodyJoint[FS_hipCenter].z;
+//    vFrameFeatures.push_back(val);
+
+
+    //HEAD------------------------------------------
+
+    //VELOCITA
+    val = curr.bodyJoint[FS_head].x - old1.bodyJoint[FS_head].x;
+    vFrameFeatures.push_back(val);
+    val = curr.bodyJoint[FS_head].y - old1.bodyJoint[FS_head].y;
+    vFrameFeatures.push_back(val);
+    val = curr.bodyJoint[FS_head].z - old1.bodyJoint[FS_head].z;
+    vFrameFeatures.push_back(val);
+
+    //ACCELERAZIONE
+    val = (curr.bodyJoint[FS_head].x - old1.bodyJoint[FS_head].x) - (old1.bodyJoint[FS_head].x - old2.bodyJoint[FS_head].x);
+    vFrameFeatures.push_back(val);
+    val = (curr.bodyJoint[FS_head].y - old1.bodyJoint[FS_head].y) - (old1.bodyJoint[FS_head].y - old2.bodyJoint[FS_head].y);
+    vFrameFeatures.push_back(val);
+    val = (curr.bodyJoint[FS_head].z - old1.bodyJoint[FS_head].z) - (old1.bodyJoint[FS_head].z - old2.bodyJoint[FS_head].z);
+    vFrameFeatures.push_back(val);
+
+    //VELOCITA
+    val = curr.bodyJoint[FS_head].x - old1.bodyJoint[FS_head].x;
+    vFrameFeatures.push_back(val);
+    val = curr.bodyJoint[FS_head].y - old1.bodyJoint[FS_head].y;
+    vFrameFeatures.push_back(val);
+    val = curr.bodyJoint[FS_head].z - old1.bodyJoint[FS_head].z;
+    vFrameFeatures.push_back(val);
+
+//        //OFFSET
+//        val = curr.bodyJoint[FS_head].x - curr.bodyJoint[FS_hipCenter].x;
+//        vFrameFeatures.push_back(val);
+//        val = curr.bodyJoint[FS_head].y - curr.bodyJoint[FS_hipCenter].y;
+//        vFrameFeatures.push_back(val);
+//        val = curr.bodyJoint[FS_head].z - curr.bodyJoint[FS_hipCenter].z;
+
+    normalize(vFrameFeatures, vFrameFeatures, 1.0, -1.0, NORM_L1);
+
+    return vFrameFeatures;
+}
+
+vector<double> getAVLMeanFeaturesQ(FrameSet old2, FrameSet old1, FrameSet curr, vector<list<double>>& vMean){
+
+    vector<double> vFrameFeatures;
+    double val;
+
+    //ACCELERAZIONE
+    val = (curr.bodyJoint[FS_handRight].x - old1.bodyJoint[FS_handRight].x) - (old1.bodyJoint[FS_handRight].x - old2.bodyJoint[FS_handRight].x);
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[0], val));
+    val = (curr.bodyJoint[FS_handRight].y - old1.bodyJoint[FS_handRight].y) - (old1.bodyJoint[FS_handRight].y - old2.bodyJoint[FS_handRight].y);
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[1], val));
+    val = (curr.bodyJoint[FS_handRight].z - old1.bodyJoint[FS_handRight].z) - (old1.bodyJoint[FS_handRight].z - old2.bodyJoint[FS_handRight].z);
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[2], val));
+
+    //VELOCITA
+    val = curr.bodyJoint[FS_handRight].x - old1.bodyJoint[FS_handRight].x;
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[3], val));
+    val = curr.bodyJoint[FS_handRight].y - old1.bodyJoint[FS_handRight].y;
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[4], val));
+    val = curr.bodyJoint[FS_handRight].z - old1.bodyJoint[FS_handRight].z;
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[5], val));
+
+    //OFFSET
+    val = curr.bodyJoint[FS_handRight].x - curr.bodyJoint[FS_hipCenter].x;
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[6], val));
+    val = curr.bodyJoint[FS_handRight].y - curr.bodyJoint[FS_hipCenter].y;
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[7], val));
+    val = curr.bodyJoint[FS_handRight].z - curr.bodyJoint[FS_hipCenter].z;
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[8], val));
+
+    //-------------------
+
+    //ACCELERAZIONE
+    val = (curr.bodyJoint[FS_handLeft].x - old1.bodyJoint[FS_handLeft].x) - (old1.bodyJoint[FS_handLeft].x - old2.bodyJoint[FS_handLeft].x);
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[9], val));
+    val = (curr.bodyJoint[FS_handLeft].y - old1.bodyJoint[FS_handLeft].y) - (old1.bodyJoint[FS_handLeft].y - old2.bodyJoint[FS_handLeft].y);
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[10], val));
+    val = (curr.bodyJoint[FS_handLeft].z - old1.bodyJoint[FS_handLeft].z) - (old1.bodyJoint[FS_handLeft].z - old2.bodyJoint[FS_handLeft].z);
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[11], val));
+
+    //VELOCITA
+    val = curr.bodyJoint[FS_handLeft].x - old1.bodyJoint[FS_handLeft].x;
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[12], val));
+    val = curr.bodyJoint[FS_handLeft].y - old1.bodyJoint[FS_handLeft].y;
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[13], val));
+    val = curr.bodyJoint[FS_handLeft].z - old1.bodyJoint[FS_handLeft].z;
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[14], val));
+
+    //OFFSET
+    val = curr.bodyJoint[FS_handLeft].x - curr.bodyJoint[FS_hipCenter].x;
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[15], val));
+    val = curr.bodyJoint[FS_handLeft].y - curr.bodyJoint[FS_hipCenter].y;
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[16], val));
+    val = curr.bodyJoint[FS_handLeft].z - curr.bodyJoint[FS_hipCenter].z;
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[17], val));
+
+
+    //---------------------
+
+    //ACCELERAZIONE
+    val = (curr.bodyJoint[FS_footRight].x - old1.bodyJoint[FS_footRight].x) - (old1.bodyJoint[FS_footRight].x - old2.bodyJoint[FS_footRight].x);
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[18], val));
+    val = (curr.bodyJoint[FS_footRight].y - old1.bodyJoint[FS_footRight].y) - (old1.bodyJoint[FS_footRight].y - old2.bodyJoint[FS_footRight].y);
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[19], val));
+    val = (curr.bodyJoint[FS_footRight].z - old1.bodyJoint[FS_footRight].z) - (old1.bodyJoint[FS_footRight].z - old2.bodyJoint[FS_footRight].z);
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[20], val));
+
+    //VELOCITA
+    val = curr.bodyJoint[FS_footRight].x - old1.bodyJoint[FS_footRight].x;
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[21], val));
+    val = curr.bodyJoint[FS_footRight].y - old1.bodyJoint[FS_footRight].y;
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[22], val));
+    val = curr.bodyJoint[FS_footRight].z - old1.bodyJoint[FS_footRight].z;
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[23], val));
+
+    //OFFSET
+    val = curr.bodyJoint[FS_footRight].x - curr.bodyJoint[FS_hipCenter].x;
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[24], val));
+    val = curr.bodyJoint[FS_footRight].y - curr.bodyJoint[FS_hipCenter].y;
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[25], val));
+    val = curr.bodyJoint[FS_footRight].z - curr.bodyJoint[FS_hipCenter].z;
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[26], val));
+
+
+    //-----------------------
+
+    //ACCELERAZIONE
+    val = (curr.bodyJoint[FS_footLeft].x - old1.bodyJoint[FS_footLeft].x) - (old1.bodyJoint[FS_footLeft].x - old2.bodyJoint[FS_footLeft].x);
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[27], val));
+    val = (curr.bodyJoint[FS_footLeft].y - old1.bodyJoint[FS_footLeft].y) - (old1.bodyJoint[FS_footLeft].y - old2.bodyJoint[FS_footLeft].y);
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[28], val));
+    val = (curr.bodyJoint[FS_footLeft].z - old1.bodyJoint[FS_footLeft].z) - (old1.bodyJoint[FS_footLeft].z - old2.bodyJoint[FS_footLeft].z);
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[29], val));
+
+    //VELOCITA
+    val = curr.bodyJoint[FS_footLeft].x - old1.bodyJoint[FS_footLeft].x;
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[30], val));
+    val = curr.bodyJoint[FS_footLeft].y - old1.bodyJoint[FS_footLeft].y;
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[31], val));
+    val = curr.bodyJoint[FS_footLeft].z - old1.bodyJoint[FS_footLeft].z;
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[32], val));
+
+    //OFFSET
+    val = curr.bodyJoint[FS_footLeft].x - curr.bodyJoint[FS_hipCenter].x;
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[33], val));
+    val = curr.bodyJoint[FS_footLeft].y - curr.bodyJoint[FS_hipCenter].y;
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[34], val));
+    val = curr.bodyJoint[FS_footLeft].z - curr.bodyJoint[FS_hipCenter].z;
+    vFrameFeatures.push_back(InsertAndMeanQ(vMean[35], val));
+
+    //-----------------------------
+
+    //VELOCITA
+    val = curr.bodyJoint[FS_head].x - old1.bodyJoint[FS_head].x;
+    vFrameFeatures.push_back(val);
+    val = curr.bodyJoint[FS_head].y - old1.bodyJoint[FS_head].y;
+    vFrameFeatures.push_back(val);
+    val = curr.bodyJoint[FS_head].z - old1.bodyJoint[FS_head].z;
+    vFrameFeatures.push_back(val);
+
+    //ACCELERAZIONE
+    val = (curr.bodyJoint[FS_head].x - old1.bodyJoint[FS_head].x) - (old1.bodyJoint[FS_head].x - old2.bodyJoint[FS_head].x);
+    vFrameFeatures.push_back(val);
+    val = (curr.bodyJoint[FS_head].y - old1.bodyJoint[FS_head].y) - (old1.bodyJoint[FS_head].y - old2.bodyJoint[FS_head].y);
+    vFrameFeatures.push_back(val);
+    val = (curr.bodyJoint[FS_head].z - old1.bodyJoint[FS_head].z) - (old1.bodyJoint[FS_head].z - old2.bodyJoint[FS_head].z);
+    vFrameFeatures.push_back(val);
+
+    //VELOCITA
+    val = curr.bodyJoint[FS_head].x - old1.bodyJoint[FS_head].x;
+    vFrameFeatures.push_back(val);
+    val = curr.bodyJoint[FS_head].y - old1.bodyJoint[FS_head].y;
+    vFrameFeatures.push_back(val);
+    val = curr.bodyJoint[FS_head].z - old1.bodyJoint[FS_head].z;
+    vFrameFeatures.push_back(val);
+
+//    //OFFSET
+//    val = curr.bodyJoint[FS_head].x - curr.bodyJoint[FS_hipCenter].x;
+//    vFrameFeatures.push_back(val);
+//    val = curr.bodyJoint[FS_head].y - curr.bodyJoint[FS_hipCenter].y;
+//    vFrameFeatures.push_back(val);
+//    val = curr.bodyJoint[FS_head].z - curr.bodyJoint[FS_hipCenter].z;
+
+    normalize(vFrameFeatures, vFrameFeatures, 1.0, -1.0, NORM_L1);
+
+    return vFrameFeatures;
+}
+
+vector<vector<unsigned int>> featureQuantKMeans(vector<vector<double>> action){
+
+    Mat labels;
+    vector<unsigned int> labelFrame;
+    vector<vector<unsigned int>> labelAction;
+    int k = centroids;
+
+    //per ogni frame
+    for(auto i=0; i<action.size(); ++i){
+
+        Mat matAction(action[0].size(), 1, CV_32F);
+
+        for(auto j=0; j<action[0].size(); ++j)
+            matAction.at<float>(j, 0) = action[i][j];
+
+       kmeans(matAction, k, labels, TermCriteria(CV_TERMCRIT_EPS+CV_TERMCRIT_ITER, 10, 1.0), 3, KMEANS_PP_CENTERS);
+
+        //TO DO: controllo valori negativi
+        for(int r=0; r<labels.rows; ++r)
+            for(int c=0; c<labels.cols; ++c)
+                qDebug() << labels.at<int>(r,c) << " ";
+
+        //TO DO: controllo conversione unsigned int
+        for(auto j=0; j<labels.rows; ++j)
+            labelFrame.push_back(labels.at<int>(j, 0));
+
+        labelAction.push_back(labelFrame);
+        labelFrame.clear();
+    }
+
+    return labelAction;
+
+}
+
+void createHMM(vector<vector<vector<unsigned int>>> allGesturesToTrain, int idAction, unsigned int levels, string subfolder, vector<double> vWeigths){
+
+    //HMM parameters
+    int numStates = 8;
+    vector<unsigned int> quantlevels;//={levels, levels, levels, levels};
+    for(auto i=0; i<36; ++i)
+        quantlevels.push_back(levels);
+
+    typedef vector<vector<vector<unsigned int>>>::iterator iter_vm;
+    const iter_vm init = allGesturesToTrain.begin();
+    const iter_vm final = allGesturesToTrain.end();
+
+    //Create new HMM
+    Cmsdhmm_hmm dhmm(numStates, quantlevels, true, 2);
+    dhmm.SetWeights(vWeigths);
+    
+    cout << "New HMM created, label: " << idAction << endl;
+
+    //Inizializzazione deterministica
+    dhmm.m_bLeftRight = true;
+    dhmm.Init_Deterministic(init->begin(), init->end()); //to do: non trova not random
+    cout << "HMM initialized." << endl;
+
+    //Train HMM
+    cout << "Training..." << endl;
+    int pniter;
+    double plogprobinit, plogprobfinal;
+    dhmm.BaumWelch_Multiple(init, final, &pniter, &plogprobinit, &plogprobfinal);
+
+    //Check probability values
+    if(plogprobinit!=plogprobinit || plogprobfinal!=plogprobfinal){
+        cout << "Problems with likelihood!" << endl;
+    }
+
+    //Store HMM (typetest settato durante load dei file con azioni)
+    cout << "Saving..." << endl << endl;
+    string prefix = "./dhmmOffline/" + subfolder + "/";
+    string name = "hmm_";
+    char strIdAction[10];
+    sprintf(strIdAction,"%02d",idAction);
+    //name.append(to_string(idAction));
+    name.append(strIdAction);
+    prefix.append(name);
+
+    char *cstr = new char[prefix.length()+1];
+    strcpy_s(cstr, prefix.length()+1, prefix.c_str());
+    dhmm.SaveToFile(cstr);
+}
+
+void GestureRecognitionDHMM::Train(const TrainingSet &tr){
+
+    int id;
+    vector<vector<double>> singleGest; //accumulo i frame con features
+    vector<vector<vector<double>>> allGesturesToTrain; //Accumulo azioni stessa classe per train
+    int countNullFrame = 0;
+    bool actionNull = false;
+
+    vector<list<double>> vMean;
+    vMean.resize(36);
+
+    
+    //For each action
+    for(auto it = tr.begin(); it != tr.end(); ++it){
+
+        // -----------------------------------------------------------
+        // FASE 1 - Calcolo delle features 
+        // -----------------------------------------------------------
+        
+        //Store current id
+        id = (*it).GetGestureId();
+
+        // sequence is null by default
+        actionNull = true;
+
+        //For each frame
+        int k = 0;
+        for (auto itframeset = it->begin(); itframeset != it->end(); ++itframeset){
+
+
+            //Get features
+            vector<double> tmpSingleFrame;
+            //tmpSingleFrame = getFeatures((*itframeset));
+            ++k;
+            if(k > 2){
+                tmpSingleFrame = getAVLFeaturesQ(*(itframeset-2), *(itframeset-1), (*itframeset));
+                //tmpSingleFrame = getAVLMeanFeaturesQ(*(itframeset-2), *(itframeset-1), (*itframeset), vMean);
+
+
+
+                //Check null features
+                for(auto i=0;i<tmpSingleFrame.size();++i)
+                    if(tmpSingleFrame[i] == 0)
+                        countNullFrame++;
+
+                if(countNullFrame <= (tmpSingleFrame.size()/2))
+                    actionNull = false;
+                //Store single frame features
+                singleGest.push_back(tmpSingleFrame);
+            }
+
+        }
+
+        //Store action
+        if(!actionNull){
+            allGesturesToTrain.push_back(singleGest);
+        }
+        else
+            cout << "Features NULL, action discarded" << endl;
+
+        actionNull = false;
+        countNullFrame = 0;
+        singleGest.clear();
+
+        //Se prossima label diversa creo hmm, altrimenti accumulo
+
+        if ((((it+1) != tr.end()) &&  (*(it+1)).GetGestureId() != id ) ||
+                (it+1) == tr.end())
+        {
+
+            // ---------------------------------------------------------
+            // QUI HO LA COLLEZIONE DELLE FEATURES PER TUTTE LE ISTANZE DEL GESTO/LABEL CORRENTE
+            // FASE 2: training
+            // ---------------------------------------------------------
+            
+            // FASE 2.1:  QUANTIZZAZIONE (double -> unsigned int)
+            vector<vector<vector<unsigned int>>> allGesturesToTrainQuant;
+            vector<vector<unsigned int>> singleGestureToTrainQuant;
+            for(auto i=0; i<allGesturesToTrain.size(); ++i){
+                // quantizzazione
+                singleGestureToTrainQuant = featureQuant(allGesturesToTrain[i], tr);
+                // aggiungo a collezione
+                allGesturesToTrainQuant.push_back(singleGestureToTrainQuant);
+                singleGestureToTrainQuant.clear();
+            }
+            //in modo da passare un vector<vector<uint>> e fare un unico metodo anche per il test
+            unsigned int levels; //se sono uguali tutti i livelli
+            
+            
+            // FASE 2.2:  CALCOLO PESI
+            vector<double> vWeights;
+            
+            // FASE 2.3:  CREAZIONE HMM
+            // versione originale
+            //createHMM(allGesturesToTrainQuant, id, tr._k, tr);
+            
+            createHMM(allGesturesToTrainQuant, id, tr._k,  tr.getTypeTest(), vWeights);
+
+            //Clear vector with actions
+            allGesturesToTrain.clear();
+            allGesturesToTrainQuant.clear();
+
+        }
+    }
+
+
+}
+
+//Load hmm trained
+vector<Cmsdhmm_hmm> loadHMM(string path, vector<string>& vTypeHMM, TestingSet ts){
+
+    //per ora il path serve solo per caricare i nomi
+    vector<Cmsdhmm_hmm> vHMM;
+    DIR* dir;
+    dirent* f;
+
+    dir = opendir(path.c_str());
+    if(!dir){
+        cout  << "Error opening HMM folder!" << endl;
+        exit(0);
+    }
+
+    while(f = readdir(dir)){
+        string filename = f->d_name;
+        if(filename.compare(".") != 0 && filename.compare("..") != 0){
+
+
+            //Store HMM type /get only the number of label)
+            cout << "Carico: " << filename << endl;
+            vTypeHMM.push_back(filename.substr(4, filename.size() - filename.find_first_of("_")));
+
+           // vector<unsigned int> quantlevels={levels, levels, levels, levels};
+            vector<unsigned int> quantlevels;//={levels, levels, levels, levels};
+            for(auto i=0; i<36; ++i)
+                quantlevels.push_back(ts._k);
+            Cmsdhmm_hmm* hmm = new Cmsdhmm_hmm(8, quantlevels, true, 2);
+            string prefix = "dhmmOffline/" + ts.getTypeTest() + "/" + filename;
+            char * hmmName = new char [prefix.length()+1];
+            strcpy_s(hmmName, prefix.length()+1, prefix.c_str());
+
+            //Load HMM
+            if(!(hmm->LoadFromFile(hmmName)))
+                cout << "Error loading HMM \n" << endl;
+
+            //Store HMM
+            vHMM.push_back(*hmm);
+
+            //Delete last HMM
+            hmm->~Cmsdhmm_hmm();
+        }
+    }
+
+
+    return vHMM;
+}
+
+//Create a name with the current data
+string getNameDateQ(){
+
+    time_t currentTime;
+    struct tm *localTime;
+    int day, month, year, hour, min, sec;
+    time( &currentTime );                   // Get the current time
+    localTime = localtime(&currentTime);  // Convert the current time to the local time
+
+    day = localTime->tm_mday;
+    month = localTime->tm_mon + 1;
+    year = localTime->tm_year + 1900;
+    hour = localTime->tm_hour;
+    min = localTime->tm_min;
+    sec = localTime->tm_sec;
+
+    stringstream nameDate;
+    nameDate << to_string(day) << "-" << to_string(month) << "-" << to_string(year) << "_" << to_string(hour) << "_" << to_string(min) << "_" << to_string(sec);
+
+    return nameDate.str();
+}
+
+void GestureRecognitionDHMM::Test(const TestingSet &ts){
+
+    vector<vector<double>> singleGestToTest;
+    double maxLogLk = -DBL_MAX;
+    int position = 0;
+    int rightId;
+    int countNullFrame = 0;
+    bool actionNull = false;
+
+    //Per le features con la media
+    vector<list<double>> vMean;
+    vMean.resize(36);
+
+    //Performance
+    int totTheoric = ts.size();
+    int totTest = 0;
+    int totRightClassified = 0;
+    int totWrongClassified = 0;
+
+    //Load all HMM trained
+    vector<Cmsdhmm_hmm> vHMM;
+    vector<string> vTypeHMM;
+    vector<Mat> vFinal;
+    vHMM = loadHMM("dhmmOffline/"+ ts.getTypeTest()+ "/", vTypeHMM, ts);
+    cout << "HMMs loaded: " << vHMM.size() << endl;
+
+    //Matrice di confusione
+    Mat1b confusionMat(21, 21);
+    for(auto r=0; r<confusionMat.rows;++r)
+        for(auto c=0; c<confusionMat.cols; ++c)
+            confusionMat(r,c) = 0;
+    for(auto i=0; i<21; ++i){
+        confusionMat(i, 0) = i;
+        confusionMat(0, i) = i;
+    }
+
+    //For each action
+    for(auto it = ts.begin(); it != ts.end(); ++it){
+
+        rightId = (*it).GetGestureId();
+
+//        string nameF = it->GetDescription().substr(43, 26);
+//        ofstream outFeat("features/"+nameF);
+
+        //For each frame
+        int k=0;
+        for (auto itframeset = it->begin(); itframeset != it->end(); ++itframeset ){
+
+            vector<double> tmpSingleFrame;
+            //tmpSingleFrame = getFeatures((*itframeset));
+            k++;
+            if(k > 2){
+                tmpSingleFrame = getAVLFeaturesQ(*(itframeset-2), *(itframeset-1), (*itframeset)); 
+                //tmpSingleFrame = getAVLMeanFeaturesQ(*(itframeset-2), *(itframeset-1), (*itframeset), vMean);
+
+//                for(auto i=0;i<tmpSingleFrame.size();++i)
+//                    outFeat << tmpSingleFrame[i] << "\t";
+//                outFeat << endl;
+
+                //Check null features
+                for(auto i=0;i<tmpSingleFrame.size();++i)
+                    if(tmpSingleFrame[i] == 0)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                        countNullFrame++;
+                if(countNullFrame > (tmpSingleFrame.size()/2))
+                    actionNull = true;
+
+                //Store single frame features
+                singleGestToTest.push_back(tmpSingleFrame);
+            }
+
+        }
+
+        //outFeat.close();
+
+        //Classification only if the action is not null
+        if(!actionNull){
+
+            totTest++;
+
+            //Vector of scores
+            vector<double> vScores;
+
+            //For each HMM
+            for(auto i = 0; i<vHMM.size(); ++i){
+
+                //Transition matrix
+                //Mat_<double> A;
+                //A = vHMM[i].m_A;
+
+                //QUANTIZZAZIONE!! (double -> unsigned int)
+                vector<vector<unsigned int>> singleGestToTestQuant;
+                singleGestToTestQuant = featureQuant(singleGestToTest, ts);
+
+                typedef vector<vector<unsigned int>>::iterator iter_vf;
+                const iter_vf init = singleGestToTestQuant.begin();
+                const iter_vf final = singleGestToTestQuant.end();
+
+                //double loglikelihood = vHMM[i].LogLikelihood(init, final, &A);
+                double loglikelihood = vHMM[i].LogLikelihood(init, final, 0);
+
+                //cout << vHMM[i].m_final << endl;
+                vFinal.push_back(vHMM[i].m_final);
+
+                //Store the score
+                vScores.push_back(loglikelihood);
+
+                //Find best
+                if(loglikelihood > maxLogLk){
+                    position = i;
+                    maxLogLk = loglikelihood;
+                }
+            }
+
+            //Check classification
+            //cout << "Sequence: " << it->GetDescription() <<endl;
+            cout << (it->GetDescription()).substr(43, 26)  << "\tGT: " << rightId << "\t" << "OUR: " << vTypeHMM[position] << "\t" << maxLogLk << "\t";
+            char strrightId[10];
+            sprintf(strrightId,"%02d",rightId);
+            if(vTypeHMM[position].compare(strrightId) == 0){
+                cout << "TRUE" << endl;
+                totRightClassified++;
+                confusionMat[rightId][stoi(vTypeHMM[position])]++;
+            }
+            else{
+                cout << "FALSE" << endl;
+                totWrongClassified++;
+                confusionMat[rightId][stoi(vTypeHMM[position])]++;
+            }
+
+            //Ad ogni fine azione stampo il vettore di scores
+//            ofstream outScores(_pathScoresTrain + (it->GetDescription()).substr(43, 26));
+//            //cout << (it->GetDescription()).substr(43, 26) << endl;
+//            outScores << it->GetDescription() << endl;
+//            outScores << rightId << endl;
+//            if(vTypeHMM[position].compare(strrightId) == 0)
+//                outScores << "TRUE" << endl;
+//            else
+//                outScores << "FALSE\t" << endl; //vTypeHMM[position] << endl;
+//            for(auto i=0; i<vScores.size();++i)
+//                outScores << vScores[i] << endl;
+
+//            outScores << endl << (it->end() - it->begin())-3 << endl;
+//            outScores << vHMM.size() << endl;
+
+
+//            for(auto i=0; i<vFinal.size() ;++i){
+//                for(auto c=0; c<vFinal[i].cols ;++c){
+//                    for (auto r=0; r<vFinal[i].rows; ++r)
+//                        outScores << vFinal[i].at<double>(r,c) << "\t";
+//                    outScores << endl;
+//                }
+//                outScores << endl << endl;
+//            }
+
+//            outScores.close();
+
+            //Clear and reset all
+            singleGestToTest.clear();
+            maxLogLk = -DBL_MAX;
+            position = 0;
+            vScores.clear();
+            vFinal.clear();
+
+        }
+        else{
+            cout << "Null action, not tested!" << endl;
+
+        }
+
+        actionNull = false;
+        countNullFrame = 0;
+    }
+
+    //Print output
+    string fileResult = "DTWMSR/" + getNameDateQ() + "_" + ts.parameter.substr(7);
+    ofstream outResults(fileResult);
+
+    outResults << getNameDateQ() << endl;
+    vector<string> outputAnnotations;
+    outputAnnotations = ts.getAnnotations();
+    for(auto i=0; i<outputAnnotations.size(); ++i)
+        outResults << outputAnnotations[i] << endl;
+    outResults << endl;
+    outResults << "Total label for train: " << vHMM.size() << endl;
+    outResults << "Theorical total action " << totTheoric << endl;
+    outResults << "Total action tested: " << totTest << endl;
+    outResults << "Right Classified: " << totRightClassified << endl;
+    outResults << "Wrong Classified: " << totWrongClassified << endl;
+    outResults << "Classification: " << ((float)totRightClassified/(float)totTest) << "%" << endl;
+    cout << "Classification: " << ((float)totRightClassified/(float)totTest) << "%" << endl;
+    outResults.close();
+
+    //Accumulazione risultati esperimenti BATCH
+    ofstream accResults("accResults.txt", std::fstream::app);
+    float resClass = ((float)totRightClassified/(float)totTest);
+    accResults << resClass << " " << fileResult.substr(0, fileResult.find_first_of(".")) << endl;
+    accResults.close();
+
+    //Salvo matrice confusione
+    ofstream outConfusion(fileResult.substr(0, fileResult.find_first_of(".")) + "_confusion.txt");
+    for(auto r=0; r<confusionMat.rows; ++r){
+        for(auto c=0; c< confusionMat.cols; ++c)
+            outConfusion << (int)confusionMat(r,c) << "\t";
+        outConfusion << endl;
+    }
+    outConfusion.close();
+
+}
+
