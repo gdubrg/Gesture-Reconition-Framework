@@ -50,6 +50,7 @@ public:
     QLabel *label_9;
     QLabel *label_10;
     QLabel *label_11;
+    QLabel *labelPose;
 
     void setupUi(QWidget *GUImyo)
     {
@@ -108,10 +109,10 @@ public:
         chart8->setGeometry(QRect(40, 590, 1221, 71));
         chartOr = new QCustomPlot(centralWidget);
         chartOr->setObjectName(QStringLiteral("chartOr"));
-        chartOr->setGeometry(QRect(40, 690, 1221, 111));
+        chartOr->setGeometry(QRect(40, 670, 1221, 111));
         chartGir = new QCustomPlot(centralWidget);
         chartGir->setObjectName(QStringLiteral("chartGir"));
-        chartGir->setGeometry(QRect(40, 810, 1221, 111));
+        chartGir->setGeometry(QRect(40, 790, 1221, 111));
         chart7 = new QCustomPlot(centralWidget);
         chart7->setObjectName(QStringLiteral("chart7"));
         chart7->setGeometry(QRect(40, 510, 1221, 71));
@@ -141,10 +142,16 @@ public:
         label_9->setGeometry(QRect(10, 620, 47, 13));
         label_10 = new QLabel(centralWidget);
         label_10->setObjectName(QStringLiteral("label_10"));
-        label_10->setGeometry(QRect(5, 740, 47, 13));
+        label_10->setGeometry(QRect(5, 720, 47, 13));
         label_11 = new QLabel(centralWidget);
         label_11->setObjectName(QStringLiteral("label_11"));
-        label_11->setGeometry(QRect(10, 860, 47, 13));
+        label_11->setGeometry(QRect(10, 840, 47, 13));
+        labelPose = new QLabel(centralWidget);
+        labelPose->setObjectName(QStringLiteral("labelPose"));
+        labelPose->setGeometry(QRect(440, 920, 351, 31));
+        QFont font1;
+        font1.setPointSize(12);
+        labelPose->setFont(font1);
         label_4->raise();
         chart1->raise();
         chart2->raise();
@@ -167,6 +174,7 @@ public:
         label_9->raise();
         label_10->raise();
         label_11->raise();
+        labelPose->raise();
 
         retranslateUi(GUImyo);
 
@@ -192,6 +200,7 @@ public:
         label_9->setText(QApplication::translate("GUImyo", "m8", 0));
         label_10->setText(QApplication::translate("GUImyo", "Orient.", 0));
         label_11->setText(QApplication::translate("GUImyo", "Gyro", 0));
+        labelPose->setText(QString());
     } // retranslateUi
 
 };

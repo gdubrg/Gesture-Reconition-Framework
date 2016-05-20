@@ -116,6 +116,9 @@ public:
    float gyr_y;
    float gyr_z;
 
+   // Pose
+   std::string currentPose;
+
 
 
 

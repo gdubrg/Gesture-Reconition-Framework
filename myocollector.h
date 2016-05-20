@@ -122,6 +122,9 @@ public:
 
         memcpy(datiEmg, emg, sizeof(int8_t) * 8);
 
+        if(onArm)
+            poseString = currentPose.toString();
+
     }
 
     void onGyroscopeData(myo::Myo* myo, uint64_t timestamp, const myo::Vector3<float>& gyro){
@@ -185,7 +188,9 @@ public:
 
     // These values are set by onOrientationData() and onPose() above.
     int roll_w, pitch_w, yaw_w;
+
     myo::Pose currentPose;
+    std::string poseString;
 
     int8_t datiEmg[8];
 

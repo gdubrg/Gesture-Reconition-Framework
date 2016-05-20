@@ -102,6 +102,8 @@ GUItestMyo::GUItestMyo(TestMyo *prec, QWidget *parent) : QWidget(parent), ui(new
 
 void GUItestMyo::UpdateInterface(){
 
+    ui->labelPose->setText(QString::fromStdString(_pGestureRec->_frame.currentPose));
+
     if(numFrames > 800){
 
         numFrames = 0;

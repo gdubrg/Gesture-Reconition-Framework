@@ -61,6 +61,8 @@ void AcquisitionMyo::getFrame(FrameSet &frame){
     frame.gyr_y = _collector.gyr_y;
     frame.gyr_z = _collector.gyr_z;
 
+    frame.currentPose = _collector.poseString;
+
 
 
 }
