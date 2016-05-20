@@ -58,30 +58,17 @@
       <x>40</x>
       <y>30</y>
       <width>1221</width>
-      <height>81</height>
+      <height>71</height>
      </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>1180</x>
-      <y>630</y>
-      <width>47</width>
-      <height>13</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>TextLabel</string>
     </property>
    </widget>
    <widget class="QCustomPlot" name="chart2" native="true">
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>120</y>
+      <y>110</y>
       <width>1221</width>
-      <height>81</height>
+      <height>71</height>
      </rect>
     </property>
    </widget>
@@ -89,9 +76,9 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>210</y>
+      <y>190</y>
       <width>1221</width>
-      <height>81</height>
+      <height>71</height>
      </rect>
     </property>
    </widget>
@@ -99,9 +86,9 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>300</y>
+      <y>270</y>
       <width>1221</width>
-      <height>81</height>
+      <height>71</height>
      </rect>
     </property>
    </widget>
@@ -109,9 +96,9 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>390</y>
+      <y>350</y>
       <width>1221</width>
-      <height>81</height>
+      <height>71</height>
      </rect>
     </property>
    </widget>
@@ -119,39 +106,19 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>480</y>
+      <y>430</y>
       <width>1221</width>
-      <height>81</height>
+      <height>71</height>
      </rect>
     </property>
-   </widget>
-   <widget class="QCustomPlot" name="chart2_6" native="true">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>570</y>
-      <width>1221</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <widget class="QCustomPlot" name="chart7" native="true">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>1221</width>
-       <height>81</height>
-      </rect>
-     </property>
-    </widget>
    </widget>
    <widget class="QCustomPlot" name="chart8" native="true">
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>650</y>
+      <y>590</y>
       <width>1221</width>
-      <height>81</height>
+      <height>71</height>
      </rect>
     </property>
    </widget>
@@ -159,24 +126,184 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>750</y>
+      <y>690</y>
       <width>1221</width>
-      <height>191</height>
+      <height>111</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QCustomPlot" name="chartGir" native="true">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>810</y>
+      <width>1221</width>
+      <height>111</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QCustomPlot" name="chart7" native="true">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>510</y>
+      <width>1221</width>
+      <height>71</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>m1</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>140</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>m2</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>220</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>m3</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>300</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>m4</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>380</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>m5</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>460</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>m6</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>540</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>m7</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>620</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>m8</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>740</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Orient.</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>860</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Gyro</string>
     </property>
    </widget>
    <zorder>label_4</zorder>
    <zorder>chart1</zorder>
-   <zorder>label</zorder>
    <zorder>chart2</zorder>
    <zorder>chart3</zorder>
    <zorder>chart4</zorder>
    <zorder>chart5</zorder>
    <zorder>chart6</zorder>
-   <zorder>chart2_6</zorder>
    <zorder>chart8</zorder>
    <zorder>chart7</zorder>
    <zorder>chartOr</zorder>
+   <zorder>chartGir</zorder>
+   <zorder>chart7</zorder>
+   <zorder>label</zorder>
+   <zorder>label_2</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label_5</zorder>
+   <zorder>label_6</zorder>
+   <zorder>label_7</zorder>
+   <zorder>label_8</zorder>
+   <zorder>label_9</zorder>
+   <zorder>label_10</zorder>
+   <zorder>label_11</zorder>
   </widget>
   <action name="actionProject">
    <property name="checkable">

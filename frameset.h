@@ -103,11 +103,18 @@ public:
 
    // MYO
 
+   //Sensori muscoli
    std::vector<int> muscles;
 
+   //Angoli braccio
    int myoPitch;
    int myoRoll;
    int myoYaw;
+
+   //Giroscopio
+   float gyr_x;
+   float gyr_y;
+   float gyr_z;
 
 
 

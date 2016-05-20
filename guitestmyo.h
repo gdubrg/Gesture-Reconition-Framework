@@ -36,6 +36,10 @@ private:
     QVector<double> roll;
     QVector<double> yaw;
 
+    QVector<double> gyr_x;
+    QVector<double> gyr_y;
+    QVector<double> gyr_z;
+
     int numFrames = 0;
 
 

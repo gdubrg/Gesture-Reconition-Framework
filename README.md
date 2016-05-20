@@ -1,6 +1,5 @@
-Versioni:
-
-1.0: 
+GRFramework (ImageLab at Unimore):
+ 
 - Device:
   - Acquisizione da Kinect 1 (RGB, depth, joint)
   - Acquisizione da Kinect 2 (RGB, depth, joint)
@@ -16,9 +15,11 @@ Versioni:
   - GUI HMM
   - GUI Test
   - GUI acquisizione
+  - GUI Myo
 - FrameSet (unità di acquisizione):
   - Kinect version
   - RGB
+  - Depth
   - Depth con skeleton
   - Joint Real
   - Joint RGB
@@ -26,6 +27,9 @@ Versioni:
   - Head Pitch
   - Head Roll
   - Head Yaw
+  
+1.0:
+- Starting version
 
 1.1: 
 - [Ambiente di test skeleton] Angolo delle spalle calcolato in base al sistema Kinect, non più da angolo spalle primo frame
@@ -39,4 +43,7 @@ Versioni:
 - [Device]: aggiunto supporto per Myo Armband
 - [Engine]: aggiunto ambiente test Myo Armband
 - [GUI]: aggiunto GUI Myo armband
-- [Frameset]: aggiunto vettore dati EMG (8 muscoli) e dati giroscopio (yaw, pitch, roll)
+- [Frameset]: aggiunto vettore dati EMG (8 muscoli) e dati orientazione (yaw, pitch, roll)
+
+2.1
+- [GUI Myo]: aggiunto grafico giroscopio (x, y, z)

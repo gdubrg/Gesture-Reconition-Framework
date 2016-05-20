@@ -124,6 +124,14 @@ public:
 
     }
 
+    void onGyroscopeData(myo::Myo* myo, uint64_t timestamp, const myo::Vector3<float>& gyro){
+
+        gyr_x = gyro.x();
+        gyr_y = gyro.y();
+        gyr_z = gyro.z();
+
+    }
+
 
 
 
@@ -180,6 +188,10 @@ public:
     myo::Pose currentPose;
 
     int8_t datiEmg[8];
+
+    float gyr_x;
+    float gyr_y;
+    float gyr_z;
 
 
 

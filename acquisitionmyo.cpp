@@ -57,4 +57,10 @@ void AcquisitionMyo::getFrame(FrameSet &frame){
     for(int i=0;i<8;++i)
         frame.muscles[i] = _collector.datiEmg[i];
 
+    frame.gyr_x = _collector.gyr_x;
+    frame.gyr_y = _collector.gyr_y;
+    frame.gyr_z = _collector.gyr_z;
+
+
+
 }
