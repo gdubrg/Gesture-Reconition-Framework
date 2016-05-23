@@ -1,4 +1,10 @@
 GRFramework (ImageLab at Unimore):
+
+Requisiti:
+- SDK 1.8 Kinect 1
+- SDK 2.0 Kinect One (+ usb 3.0)
+- OpenCV 2411
+- Qt 5.4.1 (+ Qt Creator)
  
 - Device:
   - Acquisizione da Kinect 1 (RGB, depth, joint)
