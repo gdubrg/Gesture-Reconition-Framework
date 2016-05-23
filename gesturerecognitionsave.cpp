@@ -78,12 +78,19 @@ void GestureRecognitionSave::saveToFile(){
     dirPlayer.append(relPath);
     dirPlayer.append(namePlay);
 
-    //Create path and file name
+    //Create path and file name for POINT
     string pathFile = relPath;
     string filenameTXT = filename;
-    filenameTXT.append((".txt"));
+    filenameTXT.append(("_point.txt"));
     pathFile.append(filenameTXT);
-    ofstream outfile(pathFile);
+    ofstream outfilePoint(pathFile);
+
+    //Create path and file name for POINT
+    pathFile = relPath;
+    filenameTXT = filename;
+    filenameTXT.append(("_myo.txt"));
+    pathFile.append(filenameTXT);
+    ofstream outfileMyo(pathFile);
 
     //Save data for each frame
     for(int i=0;i<vFrames.size();++i){
@@ -92,24 +99,47 @@ void GestureRecognitionSave::saveToFile(){
 
         //Save all joints (FLT_MAX if not valid)
         for(int k=0;k<28;++k){
-        outfile << vFrames[i].bodyJoint[k].x << "\t";
-        outfile << vFrames[i].bodyJoint[k].y << "\t";
-        outfile << vFrames[i].bodyJoint[k].z << "\t";
 
-        outfile << vFrames[i].bodyJointRGB[k].x << "\t";
-        outfile << vFrames[i].bodyJointRGB[k].y << "\t";
+            //Point (REAL, RGB, DEPTH)
+        outfilePoint << vFrames[i].bodyJoint[k].x << "\t";
+        outfilePoint << vFrames[i].bodyJoint[k].y << "\t";
+        outfilePoint << vFrames[i].bodyJoint[k].z << "\t";
 
-        outfile << vFrames[i].bodyJointDepth[k].x << "\t";
-        outfile << vFrames[i].bodyJointDepth[k].y << "\n";
+        outfilePoint << vFrames[i].bodyJointRGB[k].x << "\t";
+        outfilePoint << vFrames[i].bodyJointRGB[k].y << "\t";
+
+        outfilePoint << vFrames[i].bodyJointDepth[k].x << "\t";
+        outfilePoint << vFrames[i].bodyJointDepth[k].y << "\n";
 
         }
 
-        outfile << vFrames[i].pitch << "\t";
-        outfile << vFrames[i].yaw << "\t";
-        outfile << vFrames[i].roll << "\n";
+        //HEAD ROTATION
+        outfilePoint << vFrames[i].pitch << "\t";
+        outfilePoint << vFrames[i].yaw << "\t";
+        outfilePoint << vFrames[i].roll << "\n";
 
         //Next frame
-        outfile << "----------\n";
+        outfilePoint << "----------\n";
+
+
+        //MYO
+
+        //Muscles
+        for(int k=0;k<8;++k)
+            outfileMyo << vFrames[i].muscles[k] << "\t";
+        outfileMyo << "\n";
+
+        //Angles
+        outfileMyo << vFrames[i].myoPitch << "\t";
+        outfileMyo << vFrames[i].myoRoll << "\t";
+        outfileMyo << vFrames[i].myoYaw << "\n";
+
+        //Gyroscope
+        outfileMyo << vFrames[i].gyr_x << "\t";
+        outfileMyo << vFrames[i].gyr_y << "\t";
+        outfileMyo << vFrames[i].gyr_z << "\n";
+
+        outfileMyo << "----------\n";
 
         stringstream incNum;
         incNum << setfill('0') << setw(6) << to_string(i);
@@ -176,7 +206,8 @@ void GestureRecognitionSave::saveToFile(){
 
 
     //-------------------------------------------
-    outfile.close();
+    outfilePoint.close();
+    outfileMyo.close();
 
 }
 

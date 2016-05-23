@@ -1,0 +1,10 @@
+{
+    "Annotation Path": "./gestures/data/",
+    "Coordinates Path": "./gestures/data/prova1_myo.txt",
+    "Depth Path": "./gestures/data/prova1_depth",
+    "Kinect Version": 2,
+    "Name file": "prova1",
+    "Player Path": "./gestures/data/prova1_player",
+    "RGB Path": "./gestures/data/prova1_RGB",
+    "Video length": 57
+}

@@ -1,0 +1,10 @@
+{
+    "Annotation Path": "./gestures/data/",
+    "Coordinates Path": "./gestures/data/iii_point.txt",
+    "Depth Path": "./gestures/data/iii_depth",
+    "Kinect Version": 2,
+    "Name file": "iii",
+    "Player Path": "./gestures/data/iii_player",
+    "RGB Path": "./gestures/data/iii_RGB",
+    "Video length": 56
+}

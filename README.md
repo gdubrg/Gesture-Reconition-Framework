@@ -47,3 +47,6 @@ GRFramework (ImageLab at Unimore):
 
 2.1
 - [GUI Myo]: aggiunto grafico giroscopio (x, y, z)
+
+2.1.1
+- [Ambiente di acquisizione]: salvataggio dati Myo su file di testo

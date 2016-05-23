@@ -48,7 +48,7 @@ void AcquisitionMyo::getFrame(FrameSet &frame){
 
     // qui abbiamo i dati dentro al collector
     cout << "nuovo frame da collector";
-    cout << _collector.pitch_w << endl;
+//    cout << _collector.pitch_w << endl;
 
     frame.myoPitch = _collector.pitch_w;
     frame.myoRoll = _collector.roll_w;

@@ -75,14 +75,6 @@ void::MainWindow::doAll(){
     }
 
     // Myo
-//    hub("com.example.hello-myo");
-//    cout << "Attempting to find a Myo..." << endl;
-//    myo::Myo* myo = hub.waitForMyo(10000);
-//    if(!myo)
-//        cout << "Unable to find a Myo..." << endl;
-//    cout << "Connected to a Myo armband!" << endl;
-//    //DataCollector collector;
-//    //hub.addListener(&collector);
     if(ui->radioMyo->isChecked()){
         _pmyo = new AcquisitionMyo();
     }
@@ -118,10 +110,12 @@ void::MainWindow::doAll(){
         GUIgesturerecognitiontest *pGUI = new GUIgesturerecognitiontest (dynamic_cast<GestureRecognitionTEST*>(_precognizer));
         pGUI->setParent(ui->widgetL);
         pGUI->show();
+
     }
 
     // Save Annotation
     if(ui->radioSave->isChecked()){
+        _pmyo = new AcquisitionMyo();
         _precognizer = new GestureRecognitionSave();
         GUIgesturerecognitionsave *pGUI = new GUIgesturerecognitionsave (dynamic_cast<GestureRecognitionSave*>(_precognizer));
         pGUI->setParent(ui->widgetL);
